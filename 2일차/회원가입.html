@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse; /*겹치는 부분 합치는 명령어*/
+        }
+
+        table {
+            margin: 0 auto; /*큰 표 자체가 가운데로 오기 위해*/
+        }
+
+        th {
+            background-color: burlywood;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        table input , table select {
+            width: 150px;
+            height: 30px;
+        }
+
+        table button {
+            padding:4px;
+            height: 30px;
+        }
+        .cmd{
+            /*text-align은 이안에있는 내용들의 위치를 의미 text만을 의미하는게 아님*/
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption> 회원가입 </caption>
+        <tr>
+            <th>이름</th>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <th>아이디</th>
+            <td>
+                <input type="text">
+                <button>중복확인</button>
+
+            </td>
+        </tr>
+
+        <tr>
+            <th>비밀번호</th>
+            <td>
+                <input type="password">
+                <p> * 비밀번호는 4자리 이상이여야 한다.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <th>비밀번호 확인</th>
+            <td>
+                <input type="password">
+            </td>
+        </tr>
+
+        <tr>
+            <th>이메일</th>
+            <td>
+                <input type="text">@<input type="text">
+                <select> <!--select과 option은 한 쌍-->
+                    <option>선택하세요.</option>
+                    <option>naver.com</option>
+                    <option>google.com</option>
+                </select>
+                <button>이메일중복확인</button>
+            </td>
+        </tr>
+
+        <tr>
+            <th>학년/반</th>
+            <td>
+                <select>
+                    <option>선택하세요.</option>
+                    <option>1학년</option>
+                    <option>2학년</option>
+                </select>
+                학년
+                <select>
+                    <option>선택하세요.</option>
+                    <option>1반</option>
+                    <option>2반</option>
+                </select>
+                반
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="cmd">
+                <button>회원가입</button>
+                <button>가입취소</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
