@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .search{
+            display: flex;
+
+            width: 300px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        .search-word{
+            
+            border: 0px;
+            outline: 0px;
+            width: 230px;
+            margin-left: 20px;
+        }
+        .search-btn{
+            width: 50px;
+            height: 50px;
+            background-image: url(data:image/png;base64,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);
+            background-position: center;
+            background-size: cover;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <input type="text" class="search-word">
+        <div class="search-btn"></div>
+    </div>
+</body>
+</html>

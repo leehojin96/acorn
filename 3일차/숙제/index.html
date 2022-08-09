@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="header.css" rel="stylesheet">
+</head>
+<link href="main.css" rel="stylesheet">
+</head>
+<link href="footer.css" rel="stylesheet">
+</head>
+
+<style>
+    .wrap {
+        width: 800px;
+        margin: 0 auto;
+        border: 1px solid black;
+
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div>
+                회원가입양식
+            </div>
+        </header>
+        <form action="#" method="post">
+            <main>
+
+                <table>
+                    <tr>
+                        <th>이름</th>
+                        <td>
+                            <div class="text">
+                                <input type="text">
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>아이디</th>
+                        <form action="#" method="post">
+                            <td>
+                                <div class="text">
+                                    <input type="text">
+                                </div>
+                                <button id="id_check">중복확인</button>
+                            </td>
+                        </form>
+                    </tr>
+
+                    <tr>
+                        <th>비밀번호</th>
+                        <td >
+                            <div class="text">
+                                <input type="text">
+                            </div>
+                            <div id="password_rule">
+                                ※비밀번호는 문자, 숫자, 특수문자의 조합 10 ~ 16 자리로 입력이 가능합니다.
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>비밀번호 확인</th>
+                        <td>
+                            <div class="text">
+                                <input type="text">
+                            </div>
+                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>이메일</th>
+                        <td id="email">
+                            <div class="email_text"><input type="text"></div>
+                             <div class="email__">@</div>  
+                            <div class="email_text"><input type="text"></div>
+                            <select id="email_group">
+                                <option>직접입력</option>
+                                <option>naver.com</option>
+                                <option>google.com</option>
+                            </select>
+                            <button id="email_check">이메일 중복확인</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>학년/반</th>
+                        <td>
+                            <select id="school_group1">
+                                <option>선택</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            학년
+                            <select id="school_group2">
+                                <option>선택</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            반
+                        </td>
+                    </tr>
+                </table>
+
+            </main>
+            <footer>
+                <button>가입</button>
+                <button>취소</button>
+            </footer>
+        </form>
+    </div>
+</body>
+
+</html>
