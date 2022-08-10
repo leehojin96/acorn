@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .visual{
+            height: 200px;
+            background-color: aqua;
+            position: relative;
+        }
+        .visual .item{
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        .visual .item:nth-child(1){
+            background-color: red;
+            bottom: 0px;
+            right: 0px;
+            position: absolute;
+        }
+        
+        .visual .item:nth-child(2){
+            background-color: green;
+            position: absolute;
+            left: 100px;
+            top: 10px;
+        }
+        
+        .visual .item:nth-child(3){
+            background-color: blue;
+            position: absolute;
+            top: 30px;
+            right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="visual">
+        <div class="item">영역1</div>
+        <div class="item">영역2</div>
+        <div class="item">영역3</div>
+    </div>
+    <div class="notice"></div>
+</body>
+</html>

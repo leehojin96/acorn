@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.1s;
+            
+        }
+        .btn2{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.1s;
+            
+        }
+        .btn:hover{
+            background-image: url(data:image/png;base64,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);
+            background-size: cover;
+            background-position: center;
+            
+            }
+        .btn2:hover{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEbY1i_zwrxb-SEi7L_maU_vTt5LbKGw4zdw&usqp=CAU);
+            background-size: cover;
+            background-position: center;
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="btn">자동차</div>
+    <!--inline 태그 : 크기가 안먹음-->
+    <span class="btn2">비행기</span>
+    
+    
+</body>
+</html>

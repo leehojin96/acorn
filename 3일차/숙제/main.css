@@ -1,7 +1,12 @@
 main{
-    margin-bottom: 25px;
     margin-top: 25px;
     padding: 10px;
+    
+}
+main table{
+    margin-bottom: 25px;
+}
+.main_div{
     
     border-bottom: 0.5px solid rgb(99, 99, 99);
 }
@@ -25,8 +30,15 @@ main table input{
     margin-left: 5px;
     width: 140px;
 }
-#id_check{
-    height: 3;
+#id_check {
+    margin-left: 5px;
+    border: 0.5px solid black;
+    border-radius: 4px;
+    
+}
+#email_check{
+    border: 0.5px solid black;
+    border-radius: 4px;
 }
 #password_rule{
     font-size: 10px;

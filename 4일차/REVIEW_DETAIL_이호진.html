@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=JetBrains+Mono:wght@100&family=Righteous&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        body {
+            display: flex;
+        }
+
+        .main {
+            border: 1px solid black;
+            width: 820px;
+            margin: 0 auto;
+            padding: 20px;
+
+            font-family: 'Black Han Sans', sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+
+        }
+
+
+
+        .first_line {
+            width: 100%;
+            display: flex;
+
+            margin-bottom: 50px;
+
+        }
+
+        .image_div {
+
+            text-align: center;
+            width: 50%;
+        }
+
+        .taste_div {
+
+            text-align: center;
+            width: 50%;
+
+        }
+
+        .img {
+            width: 200px;
+            height: 400px;
+        }
+
+
+
+
+        .second_line {
+            padding: 10px;
+            margin-bottom: 150px;
+            width: 800px;
+
+        }
+
+        .second_line_box {
+            margin: 0 auto;
+            margin: 0px 30px;
+            display: flex;
+            
+        }
+        .sl{
+            text-align: center;
+            width: 33.3%;
+        }
+
+        .sl input {
+            width: 96%;
+            border: 0px;
+        }
+
+        .sl2 {
+            border: 0.5px solid gray;
+        }
+
+
+
+
+        .third_line {
+            margin-bottom: 50px;
+        }
+
+        .third_line input {
+            width: 99%;
+            border: 0px;
+        }
+
+        .website {
+            border: 0.5px solid gray;
+        }
+
+
+
+
+        .fourth_line {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h2>REVIEW DETAIL</h2>
+
+
+        <div class="first_line">
+            <div class="image_div">
+                <div>이미지</div>
+                <img id="img" src="https://cdn4.buysellads.net/uu/1/41334/1550855401-cc_light.png">
+            </div>
+            <div class="taste_div">
+                <div>맛평가(후기)</div>
+                <textarea cols="50" rows="8"></textarea>
+            </div>
+        </div>
+
+
+
+        <div class="second_line">
+            <div class="second_line_box">
+                <div class="sl">
+                    <div>연령대</div>
+                    <div class="sl2"><input type="text"></div>
+                </div>
+                <div class="sl">
+                    <div>만족도</div>
+                    <div class="sl2"><input type="text"></div>
+                </div>
+                <div class="sl">
+                    <div>성별</div>
+                    <div class="sl2"><input type="text"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="third_line">
+            <div>판매점 정보(구매사이트)</div>
+            <div class="website"><input type="text"></div>
+        </div>
+        <div class="fourth_line">
+            <div>더 나누고 싶은 정보</div>
+            <div><textarea cols="114" rows="3"></textarea></div>
+        </div>
+    </div>
+</body>
+
+</html>
