@@ -12,7 +12,29 @@
             margin: 0px;
         }
         ul{
-            list-style: none;
+            list-style: none; /**/
+        }
+        .menu_item ul{ /*숨기는 속성*/
+            display: none;
+            
+        }
+        .menu_item:hover ul{
+            display: block;
+            padding: 10px;
+            background-color: coral;
+            color: white;
+            width: 100%;
+        }
+        .menu_item{
+            margin: 0px 30px;
+            width: 100px;
+        }
+        .menu_wrap{
+            display: flex;
+            
+        }
+        .menu_item li{
+            width: 1000px;
         }
         /*ul li {
             width: 200px;
@@ -24,24 +46,6 @@
             text-align: center; 
 
         }*/
-        .menu_item ul{
-            display: none;
-        }
-        .menu_item:hover ul{
-            display: block;
-            background-color: blue;
-            width: 100px;
-            text-align: center;
-            padding: 10px;
-        }
-        .menu_wrap{
-            display: flex;
-            
-        }
-        .menu_item{
-            margin: 0px 30px;
-            width: 100px;
-        }
     </style>
 </head>
 

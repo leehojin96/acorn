@@ -1,0 +1,78 @@
+.inner{
+    width: 1800px;
+    margin: 0 auto;
+}
+
+body{
+    padding: 10px;
+}
+
+/*-------------------------------------------*/
+
+header{
+    background-color: rgb(246, 246, 255);;
+    height: 60px;
+    position: relative;
+}
+.top_logo{
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    width: 170px;
+    height: 30px;
+    background-image: url(https://hanyang.sen.hs.kr/dggb/module/file/selectImageView.do?atchFileId=102456&fileSn=0);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.search{
+    display: flex;
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    width: 177px;
+    height: 27px;
+
+}
+.search input{
+    
+    width: 150px;
+    height: 27px;
+
+    border: 0px;
+    outline: 0px;
+
+}
+.search_img{
+    background-image: url(https://www.midwest.edu/img/top/search.png);
+    background-position: center;
+    background-size: cover;
+    width: 27px;
+    height: 27px;
+    background-color: white;
+
+}
+
+/*-------------------------------------------*/
+
+nav{
+    background-color: rgb(230, 232, 255);
+    height: 50px;
+    padding: 5px;
+}
+.nav_group{
+    display: flex;
+    width: 70px;
+}
+.nav_group div:nth-child(2){
+    margin: 0px 10px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
