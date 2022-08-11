@@ -24,7 +24,7 @@
 
         tr td:nth-child(1) {
             text-align: center;
-            padding: 10px 20px;
+            padding: 10px 10px;
         }
 
         tr td:nth-child(2) {
@@ -33,14 +33,41 @@
 
         }
 
-        tr td:nth-child(2) input {
-            border: 0px;
+        table input{
+            width: 130px;
+            height: 30px;
+            border: 0.5px solid gray;
+            border-radius: 5px;
         }
+        table select{
+            
+            width: 130px;
+            height: 30px;
+        }
+        
+        #email_select{
+            margin: 2px 0px 2px 4px;
+        }
+
 
 
 
         #td_ {
             display: flex;
+        }
+        table button{
+            margin: 0px 0px 0px 4px;
+            width: 100px;
+            height: 35px;
+        }
+        #a1{
+            line-height: 30px;
+            margin: 0px 4px;
+        }
+        #warning{
+            color: red;
+            font-size: 11px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -78,7 +105,7 @@
                 <td>비밀번호확인</td>
                 <td>
                     <div class="input"><input type="text"></div>
-                    <div>※비밀번호는 8자리이상 영문숫자로 작성해 주세요.</div>
+                    <div id="warning">※비밀번호는 8자리이상 영문숫자로 작성해 주세요.</div>
                 </td>
             </tr>
 
@@ -88,9 +115,9 @@
                     <div id="td_">
 
                         <div class="input"><input type="text"></div>
-                        <div>@</div>
+                        <div id="a1">@</div>
                         <div class="input"><input type="text"></div>
-                        <div>
+                        <div id="email_select">
                             <select>
                                 <option> 선택하세요 </option>
                                 <option> naver.com </option>
@@ -113,7 +140,7 @@
                             <option>2</option>
                             <option>3</option>
                         </select>
-                        <div>학년</div>
+                        <div id="a1">학년</div>
 
                         <select>
                             <option>선택하세요</option>
@@ -121,7 +148,7 @@
                             <option>2</option>
                             <option>3</option>
                         </select>
-                        <div>반</div>
+                        <div id="a1">반</div>
                     </div>
                 </td>
             </tr>

@@ -6,6 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="main.css" rel="stylesheet">
+    <style>
+        .section{
+            display: flex;
+        }
+        .main{
+            width: 400px;
+            border: 0.5px solid rgb(194, 194, 194);
+            margin: 0 auto;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            text-align: center;
+
+            padding: 10px;
+
+        }
+        .main_img{
+            width: 250px;
+            height: 300px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+
+            background-image: url(https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/120187103_2835988006683802_7787440040047106943_n.jpg?stp=cp0_dst-jpg_e15_q65_s235x350&_nc_cat=106&ccb=1-7&_nc_sid=8024bb&_nc_ohc=OyNKF3A2uDkAX9490aC&_nc_ht=scontent-ssn1-1.xx&oh=00_AT_Kh2fdSSyadeeyEoSLjvMa8-czEua_WZ__XzXfXJEtEQ&oe=631811ED);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .login_info input{
+            width: 360px;
+            padding: 8px;
+            margin-bottom: 4px;
+        }
+        .login_info button{
+            width: 380px;
+            padding: 9px;
+            background-color: rgb(126, 126, 126);
+            border: 0.5px;
+        }
+    </style>
 </head>
 <body>
     <head>
@@ -25,8 +64,15 @@
     </nav>
 
     <section>
-1234
+<div class="main">
+    <div class="main_img"></div>
+    <div class="login_info">
+        <input type="text" placeholder="아이디">
+        <input type="text" placeholder="비밀번호">
+        <button>로그인</button>
+    </div>
 
+</div>
     </section>
 
 

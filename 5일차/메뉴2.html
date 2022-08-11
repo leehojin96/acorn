@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li {
+            /*width: 200px;
+            height: 50px;
+            background-color: blue;
+            
+            margin: 20px;
+            line-height: 50px;
+            text-align: center; */
+
+        }
+        .menu_item ul{
+            display: none;
+        }
+        .menu_item:hover ul{
+            display: block;
+            background-color: blue;
+            width: 100px;
+            text-align: center;
+            padding: 10px;
+        }
+        .menu_wrap{
+            display: flex;
+            
+        }
+        .menu_item{
+            margin: 0px 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu_wrap">
+        <li class="menu_item">메뉴1
+            <ul>
+                <li>하위1</li>
+                <li>하위2</li>
+                <li>하위3</li>
+            </ul>
+        </li>
+        <li class="menu_item">메뉴2
+            <ul>
+                <li>하위1</li>
+                <li>하위2</li>
+                <li>하위3</li>
+            </ul>
+        </li>
+        <li class="menu_item">메뉴3
+            <ul>
+                <li>하위1</li>
+                <li>하위2</li>
+                <li>하위3</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

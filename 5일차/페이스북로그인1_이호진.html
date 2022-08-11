@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+        }
+        .main {
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+        h2{
+            margin-bottom: 80px;
+        }
+        h2 span:nth-child(1){
+            color: red;
+        }
+        h2 span:nth-child(2){
+            color: green;
+        }
+
+
+        .login input {
+            display: block;
+            width: 350px;
+            height: 35px;
+            padding: 5px;
+        }
+        .login input:nth-child(1){
+            margin-bottom: 10px;
+        }
+        
+        .login input:nth-child(2){
+            margin-bottom: 50px;
+        }
+
+
+        .login_btn{
+            
+            background-color: black;
+            color: white;
+            width: 360px;
+            height: 50px;
+        }
+
+        .nav{
+            
+            text-align: left;
+            margin-bottom: 50px;
+        }
+        .nav a{
+            text-decoration: none;
+            color: black;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+
+        .btn {
+            width: 360px;
+            height: 50px;
+            position: relative;
+            display: block;
+            margin: 10px 0px;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        .i1 {
+
+            background-image: url("https://download-hub.com/wp-content/uploads/2021/01/Facebook_icon.png");
+        }
+
+        .i2 {
+
+            background-image: url("data:image/png;base64,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");
+        }
+
+        .i3 {
+
+            background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFMAUwMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABgcCAwUEAf/EADwQAAEDAwEBCgkNAAAAAAAAAAABAxECBBIF0QYHIyVBcnSTssITFBUxQlRxseEXISIkMjNRVWKBkaHB/8QAGwEBAAEFAQAAAAAAAAAAAAAAAAIBAwQFBgf/xAAwEQEAAgECAQkHBQEAAAAAAAAAARECAwQxEhMhNFFxgbHBBQYUMlJhoRUicpHhQv/aAAwDAQACEQMRAD8A6uRqaeVGQoMhQZCgyFBkKDIUGQoMhQZCgyFDXkVToyBRkCjIFGQKMgUZAoyBRkCjIFGQKa5UqlRKgp9TJVRESVVYRE5QrGMzNQ3eJ3nqlx1VWwVPYv8Awmv9E/1LU5Q41Vg7RXRVExXSqKKWs9PLCayipYrVAQpv8TvPVLjqqtgqexkfCa/0T/UtbrTzKojzTjar5s6VSf5C3no56fz4zHewlQt0SoKJUFMJCZIHp0teNLPpDfaQrHGGRs+saffHmt42b0VwN1ui+U7PwzFP1thFWj9actOz4lnW0+VFxxar2rsPitLlY/NHD7/ZWta/RUwJ4OIqpXSbV6YhG+MsPWHNc7pibnjDl/eLjp+Poh8mM5okBIGuSVKkih6tLXjSy6Q32kEcYZOz6xh3x5rhNk9DfPOBX+7rRVtXl1G2o4B1eFRE+zWvL7F9/tMLcafJ/dDlPbWw5GXP4R0Tx7+3x8+9YJmurQbfI+/0/mud0xNxxhzHvFx0/H0Q2SxTmiRQSKGMlUqJBT1aUvGtl0hvtIVjjDJ2nWMO+PNcZsHoKM6prnkrdSyxcVRaP21KVz6FWVcVf4vwLGWpydTp4NRuN98PvccM/lyiPCbnpSG5Yau7Zxh+hK2nKVpqpXlRS9MRMVLaZ4Y6mM45dMS2oVTQXfKWH9P5rndMXccYcz7w8dPx9EMksObokFEgphJKkiRQ9WkrxrZdIb7SCI6YZG06xh3x5rmM96ArffFXj1notPbrMXWi8vByXt7rOP8AH1l2twmu+NMeTbquX2aeCqX06Pw9qe79yejn/wAy2Psffc7hzOc/ujh94/xLi+3iB75i8Pp3Nc99Jja/GHNe8HHT8fRC5LNOcJFBIoYSSpKiRRTbavrbXTL6IlStOU1oi8sLIXNLPm84z7JtLvlCuPy5rrV2F3nsuxvf1/L6Pyj+6DWK9bvqLpxmllaWkbxpqnzKqz/ZDKZym2q327nd6kZzFdFPDbXDtrcN3FvWtDrdSVU1JyKR4dLH0tTLSzjPGemEuTfBuUT59OZ61dhd57Lsb39fy+j8uJuj19zXa7epy3pZ8ClSJjVMzGwhllOU3LXb/fzvOTeNU48kaa+iRRRIopjJKlSRQSKCRQSKCRQSKCRQSKCRQSKGEkqSokUUSKKJFFEiiiRRRIookUUSKKJFFEiimJVUAAAAAAAAAAAH/9k=");
+        }
+
+        .i4 {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAVFBMVEX///9mZmZjY2NfX19bW1tXV1f8/Pzo6Ohvb29qamrb29vw8PD09PSkpKR6enqHh4fi4uLS0tLGxsaVlZW8vLzMzMy1tbWurq6NjY2bm5uBgYF0dHRc/6yQAAADvklEQVRoge2a2XLkIAxFDQK877v9//852J3MGNKdIKMiNTO5D/3SLk6xSEhCUfSjv00qHqe+V4Gp+VSnICAJy81nLjhjjO8huWpgwE7xKiA2XwRj4blNCuw3tw6Gbc+NfRPMobAZv2CZGANhGwPLeBwGm6cmdguDjWq4YhlMYbCTYKbyINjYwsIaBBstYE03zKlqpUkVgYy3Ns5ysDuh4dZ0myDYaDZ3Vw5hsMpcZlGGwWpXZZjQEggbZVfjhTpYnDFeuBAwnBv+BBmh3LLB5aIOZEDvXK4lZJ2FpGovmez7tnZFWKqWUtZhUsUhqhOmmnFe+6Xuy655OabOUcp+S1Ktql6nzHcVVFvuHACOrdS/+zo+udnzsazY+c15zo7vk7X1QBdDxeHqDfWQ6dIZ6GLsEwDrijg+rIa7K94lwh7vtBuNfpuMyspUPvnm8V3V3qHm9asR9ZCwDHGRTZW0Iw7jM7niF7vlnw15oFPxbDkMwY6NfAb5xZBu4hznVWYa7HHAMOAPcbEHGJG6dHRYTLiXsa/OC0quoYjaabFp58YtPzUgNLZ3zJkyys1l4BzdVpSrDI5rrMM1Kss9JNw9dEI4Xele7bBzPB9hUoiebrq8cr+Ac8JVFgjPPBA65t4dGy1085WIq9fM8byEKmVldC7S3WNEtNuLKWXRWRGuEL2RcVEltILu5hWY7Y3prAgwMbtdb/QQx+TilFc+JmAn5KIK7//AfL9tnb/pXKHsiJArMNVZQvsFzK1P6K94guAWhEEs5mApwlwB9UJJGF4xhuBSpoKYp1HKRJ/v7lzCuA5lwoRx7CHn0M56m/EU4o2Ftsbg/mBImnUjgnfKfPAEOxoT7QYz97rKRLrBWsItgI9pN5gddTOn/JuyrvIQF6uDIc/UC60F7GuDIow5LmCHyg5pve5N0mGLSYvPDzlVlBT9fN1uJloffUg6PefE1FzXStaH9hdPScfQ0m4I8ZR7JasnnbB0TpVIJ4xpMaQ80pgHM6ttzguLamQZyCacol5EFVXlDtsLRnQtYWr9D9E8iaJeYR+iWOk7HXeFP/ded1TrvdI3u2V9vQfilc6U38Ukbndl5T6xFqqSZCm+7y/BqyW5eQ0+24VeY9EOwwLzZ2NzIWBby3JJQT6Fw+bbCZUn9uHiUvTdu4WobKrlh0Ye6bG371LrZVgOMllbu89sXFNxWRfgNC2rWXU0dWmmgGp+3kpWtGui/z7bw8RC1V+osnlL0mrt4k8OS9EM5bJt9Uza1aiK3OWk2K1+P/o/9QuuazK9pg4CqQAAAABJRU5ErkJggg==");
+        }
+
+        /*
+        hidden클래스 지명 후 이미지 숨기는 속성 
+        .hidden{
+            visibility: hidden;
+        }
+        */
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <h2>
+            <span>S</span>NACK <span>M</span>AL
+        </h2>
+        <div class="login">
+            <input type="text" placeholder="ID">
+            <input type="text" placeholder="비밀번호">
+        </div>
+
+       
+            <button class="login_btn">
+                로그인
+            </button>
+            <div class="nav">
+                <span><a href="#">회원가입</a></span>
+                <span><a href="#">비밀번호 찾기</a></span>
+                <span><a href="#">사랑을주세요</a></span>
+            </div>
+
+        <div class="btn_group">
+
+            <button class="btn">
+                <span class="icon i1"></span>
+                Facebook 로그인
+            </button>
+
+
+            <button class="btn">
+                <span class="icon i2"></span>
+                Google 로그인
+            </button>
+
+
+            <button class="btn">
+                <span class="icon i3"></span>
+                Naver 로그인
+            </button>
+
+            <button class="btn">
+                <span class="icon i4"></span>
+                Apple 로그인
+            </button>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
