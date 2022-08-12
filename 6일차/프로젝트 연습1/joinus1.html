@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <style>
+        .joinus_wrap {
+            margin-top: 80px;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 13px;
+            margin: 0 auto;
+        }
+
+        table,
+        td {
+            border: 0.5px solid grey;
+            border-collapse: collapse;
+        }
+
+        table input {
+            outline: none;
+            border: 0.5px solid grey;
+            width: 130px;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        table tr td:nth-child(1) {
+            padding: 10px;
+            text-align: center;
+        }
+        table button{
+            width: 130px;
+            height: 35px;
+            border: 0.5px solid grey;
+            border-radius: 5px;
+        }
+        table button:hover{
+            background-color: rgb(150, 150, 150);
+        }
+
+        table select{
+            width: 100px;
+            height: 30px;
+
+        }
+
+        #td_flex {
+            display: flex;
+        }
+
+        #warning {
+            font-size: 12px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="joinus_wrap">
+        <h2>회원가입</h2>
+        <div class="join_table">
+            <table>
+                <tr>
+                    <td>이름</td>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td class="td_flex">아이디</td>
+                    <td>
+                        <input type="text">
+                        <button>
+                            중복확인
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password">
+                        <div id="warning">※비밀번호는 8자리이상 영문숫자로 작성해 주세요.</div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>비밀번호확인</td>
+                    <td><input type="password">
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_flex">이메일</td>
+                    <td>
+                        <input type="text">
+                        @
+                        <input type="text">
+                        <select>
+                            <option>선택하세요</option>
+                            <option>naver.com</option>
+                            <option>google.com</option>
+                        </select>
+                        <button>중복확인</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_flex">학년/반</td>
+                    <td><select>
+                            <option>선택하세요</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        학년
+
+                        <select>
+                            <option>선택하세요</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+
+
+                        반
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="">
+                        <button>가입</button>
+                        <a href="index1.html"><button>취소</button></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

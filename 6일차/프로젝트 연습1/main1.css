@@ -1,5 +1,5 @@
 .inner{
-    width: 1800px;
+    width: 1750px;
     margin: 0 auto;
 }
 
@@ -12,6 +12,7 @@ body{
 header{
     background-color: rgb(246, 246, 255);;
     height: 60px;
+    width: 1800px;
     position: relative;
 }
 .top_logo{
@@ -20,8 +21,8 @@ header{
     top: 10px;
     left: 10px;
 
-    width: 170px;
-    height: 30px;
+    width: 220px;
+    height: 42px;
     background-image: url(https://hanyang.sen.hs.kr/dggb/module/file/selectImageView.do?atchFileId=102456&fileSn=0);
     background-position: center;
     background-size: cover;
@@ -42,10 +43,12 @@ header{
 .search input{
     
     width: 150px;
-    height: 27px;
+    height: 19px;
 
     border: 0px;
     outline: 0px;
+
+    padding: 4px;
 
 }
 .search_img{
@@ -64,15 +67,39 @@ nav{
     background-color: rgb(230, 232, 255);
     height: 50px;
     padding: 5px;
+    width: 1790px;
 }
 .nav_group{
     display: flex;
-    width: 70px;
+    margin: 10px 0px 20px 20px;
 }
-.nav_group div:nth-child(2){
+.nav_group a:nth-child(2){
     margin: 0px 10px;
 }
 nav a{
     text-decoration: none;
     color: black;
+    font-size: 11px;
+}
+
+
+/*-------------------------------------------*/
+
+footer{
+    position:  relative;
+    background-color: rgb(230, 232, 255);
+    height: 50px;
+    padding: 5px;
+    font-size: 11px;
+}
+.footer_address{
+    position: absolute;
+    top: 10px;
+    left: 600px;
+
+}
+.footer_info{
+    position: absolute;
+    top: 10px;
+    left: 1250px;
 }
