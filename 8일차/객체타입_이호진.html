@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //각각
+        let name="Yogurt"
+        let kcal="185kcal"
+        let protein="18.7mg"
+        console.log(name,kcal,protein);
+        console.log("========================")
+
+
+        //한번에
+        let snack = {name : "Snack", kcal : "220kcal" , protein:"12mg"}
+
+        console.log(snack.name,snack.kcal,snack.protein);
+        console.log("========================")
+
+
+
+        //객체타입
+        let snacks = [
+            {
+                name:"ProteinDrink",
+                kcal:"220kcal",
+                protein:"20mg"
+            },
+            {
+                name:"DryChicken",
+                kcal:"150kcal",
+                protein:"23mg"
+            },
+            {
+                name:"Milk",
+                kcal:"250kcal",
+                protein:"10mg"
+            }
+        ]
+
+        for(let i=0 ; i<snacks.length ; i++){
+            console.log(snacks[i].name);
+            console.log(snacks[i].kcal);
+            console.log(snacks[i].protein);
+            console.log("========================")
+        }
+    </script>
+    
+</body>
+</html>

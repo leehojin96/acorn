@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3> Switch </h3>
+    <script>
+
+        
+        //"1" -> 1
+        //"12" -> 12
+        // parseInt("12") => 12 파스인트
+        // parseInt() , 문자를 숫자로 바꿈
+
+
+        let menu = parseInt(prompt("메뉴 선택하세요 1.입력 2.조회 3.삭제 4.변경"));
+
+        
+
+        switch (menu) {
+            case "1":
+                alert("입력합니다.");
+                break;
+            case "2":
+                alert("조회합니다.");
+                break;
+            case "3":
+                alert("삭제합니다.");
+                break;
+            case "4":
+                alert("변경합니다.");
+                break;
+            default:
+                alert("잘못입력하셨습니다.");
+                break;
+        }
+
+    </script>
+
+</body>
+
+</html>
