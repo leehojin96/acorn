@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/노트/javascript에 대하여/javascriptcss.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="inner">
+
+        <a href="/노트/javascript에 대하여/javascript_index.html">
+            <h1>JavaScript</h1>
+        </a>
+        <hr>
+        <section>
+            <ul class="menu">
+                <li class="index index1">
+                    일지
+                    <ul class="index_note">
+                        <a href="jajvaday01.html">
+                            <li>자바1일차</li>
+                        </a>
+                        <li>자바2일차</li>
+                        <li>자바3일차</li>
+                    </ul>
+                </li>
+
+
+                <li class="index">
+                    <hr>
+                    1. 자바스크립트 시작
+                    <ul class="index_menu">
+                        <a href="/노트/javascript에 대하여/javascript_intro.html">
+                            <li>자바스크립트 개요</li>
+                        </a>
+                        <li>자바스크립트 기초</li>
+                        <li>자바스크립트 소개</li>
+                    </ul>
+                </li>
+                <li class="index">
+                    <hr>
+                    2. 타입
+                    <ul class="index_menu">
+                        <li>기본 타입</li>
+                        <li>타입 변환</li>
+                        <li>변수</li>
+                    </ul>
+                </li>
+                <li class="index">
+                    <hr>
+                    3. 연산자
+                    <ul class="index_menu">
+                        <li>산술 연산자</li>
+                        <li>대입 연산자</li>
+                        <li>증감 연산자</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="main_section">
+                <li>
+                    <pre>
+        alert("hello javascript");                                 -> 확인 창
+--------------------------------------------------------
+    function check() {                                                   -> 함수 정의
+        let userID = document.getElementById("userID");
+        //alert(userID);
+        //alert(userID.value);
+
+        console.log("userid" + userID);
+        console.log("userid value" + userID.value);
+        
+
+        if (userID.value == "") {
+            alert("아이디를 입력하세요.");
+        }else{
+            alert("입력하신 아이디는 : " + userID.value);
+            alert("가입을 환영합니다.");
+        }
+
+    }
+--------------------------------------------------------
+<span>변수 정의</span>
+        let name = prompt("이름을 입력하세요."); -> let 변수 정의 / prompt 입력 창
+        alert("당신의 이름은 "+ name + " 이군요."); -> 확인 창
+--------------------------------------------------------
+<span>확인문</span>
+        let result = confirm("확인하셨나요?"); <span>-> 변수 정의 후 confirm라는 ture/false 출력 가능한 선택 창을 변수 입력</span>
+        alert(result); <span>-> confirm 선택 값 한 번 확인 창</span>
+
+        if( result == true){<span> -> 위 선택에 입력된 값에 따라 결과값을 다르게 출력</span>
+            alert("다음을 진행해 주세요!");
+        }else{
+            alert("확인을 꼭 하셔야 합니다.");
+        }
+--------------------------------------------------------
+<span>반복문</span>
+        let N = 0; <span></span>
+        let SUM = 0; <span></span>
+
+        for (N = 0; N <= 10; N++) { <span>N은 0부터 시작  </span>
+            SUM = SUM + N
+        }
+        alert("합계 =" + SUM);    
+--------------------------------------------------------
+
+
+                    </pre>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>

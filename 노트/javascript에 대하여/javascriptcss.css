@@ -2,9 +2,20 @@
     width: 1850px;
     margin: 0 auto;
 }
+
+
 h1{
     text-align: center;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    font-weight: bold;
+}
+
+
 section{
     display: flex;
 }
@@ -16,14 +27,29 @@ ul{
 .index{
     list-style: none;
 }
-a{
-    text-decoration: none;
-    color: black;
-}
-.menu{
 
-}
-.index, .index_menu{
+.menu{
     border: 0.5px solid grey;
-    border-collapse: collapse;
+    height: 1080px;
+    width: 300px;
+}
+.main_section{
+    padding: 40px;
+    width: 100%;
+}
+
+.index1 ul{
+    display:  none;
+}
+.index1:hover ul{
+    display: block;
+    padding: 15px;
+    width: 100%;
+}
+pre{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+}
+span{
+    color: rgb(180, 180, 180);
 }
