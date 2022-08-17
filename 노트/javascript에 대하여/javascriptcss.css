@@ -1,0 +1,29 @@
+.inner{
+    width: 1850px;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+}
+section{
+    display: flex;
+}
+ul{
+    
+    padding: 15px;
+    
+}
+.index{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.menu{
+
+}
+.index, .index_menu{
+    border: 0.5px solid grey;
+    border-collapse: collapse;
+}
