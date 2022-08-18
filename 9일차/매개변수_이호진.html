@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let a, b, i = 0;
+
+        function lee(i) {
+            if (0 < i && i < 100) {
+
+                grade(i);
+                document.write("입력한 " + i + "점은 " + b + "입니다");
+
+            } else {
+                document.write("점수 다시 입력.");
+            }
+
+
+        }
+
+        function grade(a) {
+            if (a >= 90) {
+                b = "a학점"
+            } else if (a >= 80) {
+                b = "b학점"
+            } else if (a >= 70) {
+                b = "c학점"
+            } else {
+                b = "F학점"
+            }
+
+        }
+
+
+
+        lee(91);
+        
+        
+
+    </script>
+
+</body>
+
+</html>

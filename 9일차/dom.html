@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function change() {
+           // alert("call");
+        //}
+
+        let myspan = document.getElementById("myspan");
+
+        myspan.style.color="green";
+        myspan.style.fontSize="30px";
+        myspan.style.display="block";
+        myspan.style.width="1000px";
+        myspan.style.height="50px";
+        myspan.style.border="3px dotted balck";
+        myspan.style.margin="20px";
+
+        myspan.innerHTML="<strong> 진짜 변경 되네요 </storng>!"
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <span id="myspan">
+        내용
+    </span>
+
+    <button onclick="change()">스타일변경</button>
+
+    <h3>DOM</h3>
+    <P>
+        html문서의 각 요소(태그)를 객체화한 것
+        브라우저 -> 로드 -> 문서의 내용이 모두 메모리에 객체형태로 저장됨
+        브라우저 -> 자바스크립트에게 제공 document 
+    </P>
+    <P>
+        -parentElement -부모객체
+        -children -자식들
+        -firstElementChild
+        -lastElementChild
+        -previousElementSibling
+        -nextElementSibling
+    </P>
+</body>
+
+</html>

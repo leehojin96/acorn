@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        
+        
+        
+        function a(score){
+            total = score + "점은 " + b(score) +" 입니다.";
+            return total;
+        }
+        function b(i) {
+            if (i >= 90) {
+                grade = "a학점"
+            } else if (i >= 80) {
+                gradeb = "b학점"
+            } else if (i >= 70) {
+                grade = "c학점"
+            } else {
+                grade = "F학점"
+            }
+            return grade;
+
+
+        }
+
+        let c = a(90);
+        alert(c);
+
+
+    </script>
+
+</body>
+
+</html>

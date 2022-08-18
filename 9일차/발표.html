@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <script>
+
+        //1단계
+        //리터널 표기로 객체 생성
+        var person1 = {
+            name : "루피",
+            birthday : 961113
+        };
+        var person2 = {
+            name : "조로",
+            birthday : 951031
+        };
+
+        //객체.프로퍼티 참조
+        document.write("이름 : " + person1.name +"<br>"+ "생년월 : " + person1.birthday +"<br>");
+        document.write("이름 : " + person2.name +"<br>"+ "생년월 : " + person2.birthday +"<br>");
+        
+
+
+        document.write("==================<br>" );
+
+
+
+        //2단계
+        //배열 응용 객체 
+        let snacks = [{
+            name: "맛동산",
+            price: 3000,
+            weight: 300,
+        }, {
+            name: "빼빼로",
+            price: 1200,
+            weight: 80,
+        }];
+
+        //객체[인덱스].프로퍼티 참조
+        document.write(snacks[0].name +"<br>");
+        document.write(snacks[0].price +"<br>");
+        document.write(snacks[0].weight +"<br>");
+
+        document.write("<br>" );
+
+        document.write(snacks[1].name+"<br>");
+        document.write(snacks[1].price+"<br>");
+        document.write(snacks[1].weight+"<br>");
+
+
+        document.write("==================<br>" );
+
+
+
+        //3단계
+        var person3 = {
+            name : "루피",
+            introduce : "나의 이름은 " + name +" 입니다",
+            birthday : "961113",
+            pId : "1234567",
+            fullId : function(){                         //프로퍼티 안에 또 프로퍼티를 호출하여 쓸 수 없어서 방법이 따로 있다
+                                                         //'메소드'라 칭함
+
+                return this.birthday + "-" + this.pId;   //"return" 중요
+            }
+        }
+            
+        
+        document.write(person3.name + "<br>");  //프로퍼티 참조
+
+        document.write(person3.fullId() + "<br>"); //메소드 참조 법
+        document.write(person3.fullId + "<br>"); //메소드 참조 오답
+
+
+        document.write("==================<br>" );
+
+        for(let i = 1 ; i <=10 ; i++){
+            //홀수만 출력
+            //짝수면 바로 다음번 진행으로 넘어갈 수 있도록
+            if(!(i%2)){
+
+            //if( i%2){ //짝수면 다음으로 진행
+                continue;
+            }
+            document.write(i+"<br>");
+        }
+
+        document.write("==================<br>" );
+
+
+        //DOM
+        function checkid(){
+            let pid = document.getElementById("idinput").value;
+            
+            alert("입력하신 ID는 " + pid + " 입니다.")
+        }
+        
+
+       
+    </script>
+
+    <!--이벤트-->
+    <input type="text" onclick="alert('버튼 클릭됨!!')"><br>           
+    
+    <!-- DOM -->
+    <input type="text" id="idinput" placeholder="아이디"> <button onclick="checkid()"> 로그인</button>
+
+    
+
+
+</body>
+
+</html>

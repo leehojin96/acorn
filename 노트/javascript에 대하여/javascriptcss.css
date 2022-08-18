@@ -36,6 +36,7 @@ ul{
 .main_section{
     padding: 40px;
     width: 100%;
+    display: flex;
 }
 
 .index1 ul{
@@ -52,4 +53,14 @@ pre{
 }
 span{
     color: rgb(180, 180, 180);
+}
+.text{
+    list-style: none;
+    border: 0.5px solid grey;
+    padding: 40px;
+    width: 100%;
+}
+.code{
+    padding: 40px;
+    list-style: none;
 }

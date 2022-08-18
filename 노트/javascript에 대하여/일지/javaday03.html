@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/노트/javascript에 대하여/javascriptcss.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="inner">
+
+        <a href="/노트/javascript에 대하여/javascript_index.html">
+            <h1>JavaScript</h1>
+        </a>
+        <hr>
+        <section>
+            <ul class="menu">
+                <li class="index index1">
+                    일지
+                    <ul class="index_note">
+                        <a href="javaday01.html">
+                            <li>자바1일차</li>
+                        </a>
+                        <li>자바2일차</li>
+                        <a href="javaday03.html">
+                            <li>자바3일차</li>
+                        </a>
+                    </ul>
+                </li>
+
+
+                <li class="index">
+                    <hr>
+                    1. 자바스크립트 시작
+                    <ul class="index_menu">
+                        <a href="/노트/javascript에 대하여/javascript_intro.html">
+                            <li>자바스크립트 개요</li>
+                        </a>
+                        <li>자바스크립트 기초</li>
+                        <li>자바스크립트 소개</li>
+                    </ul>
+                </li>
+                <li class="index">
+                    <hr>
+                    2. 타입
+                    <ul class="index_menu">
+                        <li>기본 타입</li>
+                        <li>타입 변환</li>
+                        <li>변수</li>
+                    </ul>
+                </li>
+                <li class="index">
+                    <hr>
+                    3. 연산자
+                    <ul class="index_menu">
+                        <li>산술 연산자</li>
+                        <li>대입 연산자</li>
+                        <li>증감 연산자</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="main_section">
+                <li class="code">
+                    <pre>
+function lee1() {
+
+let x = 9; let y =1;
+while(y<10){
+document.write(x+"*"+ y +"="+ x*y +" br ");
+y++;
+}
+
+
+}
+lee1();
+
+--------------------------------------------------------
+
+function printStar3(){
+for(let i=1 ; i<=3 ; i++){
+document.write("*");
+}
+}
+
+function printStar7(){
+for(let i=1 ; i<=7 ; i++){
+document.write("*");
+}
+}
+
+--------------------------------------------------------
+
+//입력정보가 있는 함수(매개 변수)
+function printStar(size){
+for(let i=1 ; i<=size ; i++){
+document.write("*");
+}
+}
+
+printStar(6);
+
+--------------------------------------------------------
+
+function printHi(size){
+alert(size);
+for( let i = 1 ; i <= size ; i++){
+console.log("hi");
+}
+
+}
+printHi(5);
+
+--------------------------------------------------------
+
+function hi2(name){
+alert(name + "hi");
+}
+
+function adder(su1,su2){
+let total;
+total = su1 + su2;
+
+return total;
+}
+
+hi2("홍길동");
+let rtn = adder(3,5);
+alert(rtn);
+
+--------------------------------------------------------
+
+for (let i = 1; i <= 5; i++) {
+document.write("***** br");
+}
+
+document.write("---------------- br");
+
+for(let i= 1 ; i<=5 ; i++){
+for(let a=1 ; a<=5 ; a++){
+document.write("*");
+}
+document.write(" br ");
+}
+
+--------------------------------------------------------
+
+let a, b, i = 0;
+
+function lee(i) {
+if (0 < i && i < 100) {
+
+grade(i);
+document.write("입력한 " + i + "점은 " + b + "입니다");
+
+} else {
+document.write("점수 다시 입력.");
+}
+
+
+}
+
+function grade(a) {
+if (a >= 90) {
+b = "a학점"
+} else if (a >= 80) {
+b = "b학점"
+} else if (a >= 70) {
+b = "c학점"
+} else {
+b = "F학점"
+}
+
+}
+
+
+
+lee(91);
+
+--------------------------------------------------------
+
+function a(score){
+total = score + "점은 " + b(score) +" 입니다.";
+return total;
+}
+function b(i) {
+if (i >= 90) {
+grade = "a학점"
+} else if (i >= 80) {
+gradeb = "b학점"
+} else if (i >= 70) {
+grade = "c학점"
+} else {
+grade = "F학점"
+}
+return grade;
+
+
+}
+
+let c = a(90);
+alert(c);
+
+--------------------------------------------------------
+
+function fruit(fr1, fr2){
+
+
+return fr1 + fr2;
+}
+
+let result = fruit("사과","딸기");
+alert(result);
+
+--------------------------------------------------------
+
+for(let i = 1 ; i <=10 ; i++){
+
+//if(!(i%2)) //홀수만 출력
+
+if( i%2){ //짝수면 다음으로 진행
+continue; //짝수면 바로 다음번 진행으로 넘어갈 수 있도록
+}
+alert(i);
+}
+
+--------------------------------------------------------
+
+let total;
+function division(su1,su2){
+total = su1/su2;
+}
+
+let divisions = division(7,3);
+alert(divisions);
+alert(total);
+
+--------------------------------------------------------
+
+function adder(su1,su2){
+let total;
+total = su1 + su2 ;
+let str="";
+for(let i=1; i<'total ; i++){
+str+="*";
+}
+return str;
+}
+
+let r2 = adder(2,6);
+alert("ddff"+ r2)
+
+let i=1;
+while(ture){
+i++;
+document.write(r2+"br");
+if(i>8) break;
+}
+
+--------------------------------------------------------
+
+                    </pre>
+                </li>
+                <li class="text">
+                    <pre>
+-> 함수 정의
+
+-> 변수선언
+-> while반복문
+
+
+
+
+
+
+-> 함수 호출
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-> total을 호출한 함수에게 출력함
+
+
+
+-> 호출한 함수의 출력된 값을 바로 rtn변수에 입력
+-> 변수 rtn 출력
+
+
+
+-> ***** 5줄 출력
+
+
+
+
+
+-> * 5개 5줄 출력 / 반복문 안에 반복문 넣어서 활용
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-> 전역 함수 선언
+
+
+-> total에 넣은 후
+-> return 으로 출ㄹ
+
+                    </pre>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>
