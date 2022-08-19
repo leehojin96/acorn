@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <script>
+
+
+        //각 변수 생성 및 입력 
+        let name = '루피';
+        let birthday = 961113;
+        let pId = 1234567;
+
+        document.write(name + birthday + pId + '<br>');
+        document.write("==================<br>");
+
+        //객체 생성
+        let person1 = {
+            name: "루피",
+            birthday: 961113,
+            pId: 1234567
+        };
+        let person2 = {
+            name: "조로",
+            birthday: 951031,
+            pId: 1234567
+        };
+
+        //객체.프로퍼티 참조
+        document.write(person1.name + person1.birthday + person1.pId + "<br>");
+        document.write(person2.name + person2.birthday + person2.pId + "<br>");
+
+
+
+        document.write("==================<br>");
+
+
+
+        //배열 응용 객체 
+        let onepeice = [{
+            name: "루피",
+            birthday: 961113,
+            pId: 1234567
+        }, {
+            name: "조로",
+            birthday: 951031,
+            pId: 1234567
+        }];
+
+        //객체[인덱스].프로퍼티 참조
+        document.write(onepeice[0].name + onepeice[0].birthday + onepeice[0].pId + "<br>");
+        document.write(onepeice[1].name + onepeice[1].birthday + onepeice[1].pId + "<br>");
+
+
+
+        document.write("==================<br>");
+
+
+
+        //
+        let person3 = {
+            name: "루피",
+            birthday: '961113',  //961,113 이라는 숫자가 아닌 961113 문장으로 쓰기 위해 ' ' 사용
+            pId: '1234567',
+
+
+            //'메소드'라 칭함
+            //"return" 중요
+            fullId: function () {
+
+                return this.birthday + this.pId; 
+            }
+        }
+        
+        document.write(person3.name + person3.fullId() + "<br>");  //메소드 참조 법
+
+
+        document.write("메소드 참조할때 ( ) 없을때 출력 : " + person3.fullId + "<br>"); //메소드 참조 오류
+
+
+        document.write("==================<br>");
+
+        document.write("a=짝수 -> !(a) -> a=홀수 가 아니라 -> a=짝수가 아니다 or 아닌 나머지로 보는게 좀 더 다양한 상황에 적합하게 적용할 듯 하다<br>");
+        document.write("*아래 반복문 i=0 시작으로 예시함 / i=1 시작하면 0은 다 빼고보면 됨* <br> i%2==0 : '짝수' , '0' 참 / 나머지 거짓<br> i%2!=0 : '짝수' , '0' 거짓 / 나머지 참 <br> i%2 : '짝수' , '0' 거짓 / 나머지 참<br> !(i%2) : '짝수' , '0' 참 / 나머지 거짓<br> ");
+
+        document.write("==================<br>");
+
+
+        for (let i = 0; i <= 10; i++) {
+
+            if (!(i % 2)) {
+                document.write(i + "<br>");
+            }
+        }
+        document.write("==================<br>");
+
+        for (let i = 0; i <= 10; i++) {
+
+            if (!(i % 2)) {
+                continue;
+            }
+            document.write(i + "<br>");
+        }
+
+
+        document.write("==================<br>");
+
+
+        //DOM
+        function checkid() {
+            let pid = document.getElementById("idinput").value;
+
+            alert("입력하신 ID는 " + pid + " 입니다.")
+        }
+
+
+
+    </script>
+
+    <!--이벤트-->
+    <input type="text" onclick="alert('버튼 클릭됨!!')"><br>
+
+    <!-- DOM -->
+    <input type="text" id="idinput" placeholder="아이디"> <button onclick="checkid()"> 로그인</button>
+
+
+
+
+</body>
+
+</html>

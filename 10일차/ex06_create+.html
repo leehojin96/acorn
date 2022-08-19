@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function create(){
+            
+            // 1.바뀔 변수에 요소 생성 1-1.바뀔 변수 디자인 2. 변수 주소 입력할 변수 생성 2-1. 변수 입력 방식
+            
+            let newDiv = document.createElement("div"); //newDiv 변수에 만들고 새로운 요소 div태그로 생성 입력
+            //newDiv.innerHTML="a";                       //newDiv 내용 "a" 로 입력
+            
+            
+            let body = document.getElementById("body"); //변수 body 생성 및 ID가 "body"인 요소를 입력
+            body.appendChild(newDiv);                   //변수 body에 ()안을 자식으로 추가
+    
+
+            let str="";
+
+            for(let i = 1;i<=10;i++){
+                str+="a";
+            }
+            
+            newDiv.innerText= str
+    
+        }
+        </script>
+</head>
+<body id = "body">
+
+    
+    
+    <button onclick="create()"> div생성 </button>
+</body>
+</html>
