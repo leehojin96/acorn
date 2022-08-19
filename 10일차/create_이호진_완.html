@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+
+        }
+
+        li {
+
+            border: 1px dotted black;
+        }
+
+        .box {
+            display: flex;
+            padding: 5px;
+        }
+
+        .box_a {
+            padding: 5px;
+            margin: 0 auto;
+            width: 33%;
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            
+        }
+        .box_b , .box_b ul{
+            margin-left: -40px;
+        }
+    </style>
+    <script>
+
+        let r = 1;
+        let b = 1;
+        let g = 1;
+        let cnt = 0;
+
+        function create_redbox() {
+
+
+            let redbox = document.createElement("li");
+
+            redbox.style.backgroundColor = "red"
+            redbox.style.width = "100%"
+            redbox.style.height = "30px"
+            redbox.innerHTML = r;
+
+
+
+
+            let box_address = document.getElementById("redbox_li");
+
+            box_address.appendChild(redbox);
+
+            r++;
+            cnt++;
+
+            let hit = document.getElementById("hit");
+            hit.innerHTML = "총 합 : " + cnt;
+
+        }
+
+
+        function create_bluebox() {
+            let bluebox = document.createElement("li");
+
+            bluebox.style.backgroundColor = "blue"
+            bluebox.style.width = "100%"
+            bluebox.style.height = "30px"
+            bluebox.innerHTML = b
+
+
+
+            let box_address = document.getElementById("bluebox_li");
+
+            box_address.appendChild(bluebox);
+            b++;
+            cnt++;
+
+            let hit = document.getElementById("hit");
+            hit.innerHTML = "총 합 : " + cnt;
+
+        }
+        function create_greenbox() {
+            let greenbox = document.createElement("li");
+
+            greenbox.style.backgroundColor = "green"
+            greenbox.style.width = "100%"
+            greenbox.style.height = "30px"
+            greenbox.innerHTML = g
+
+
+
+            let box_address = document.getElementById("greenbox_li");
+
+            box_address.appendChild(greenbox);
+            g++;
+            cnt++;
+
+            let hit = document.getElementById("hit");
+            hit.innerHTML = "총 합 : " + cnt;
+
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <h3 id="hit">총 합 : </h3>
+    <ul class="box">
+        <li class="box_a">
+            <ul class="box_b">
+                <li class="box_c">
+                    <button onclick="create_redbox()" on> 빨강 상자 </button>
+                </li>
+                <ul id="redbox_li"></ul>
+            </ul>
+
+        </li>
+        <li class="box_a">
+            <ul class="box_b">
+                <li>
+                    <button onclick="create_bluebox()"> 파랑 상자 </button>
+                </li>
+                <ul id="bluebox_li"></ul>
+            </ul>
+        </li>
+        <li class="box_a">
+            <ul class="box_b">
+                <li>
+                    <button onclick="create_greenbox()"> 초록 상자 </button>
+                </li>
+                <ul id="greenbox_li"></ul>
+            </ul>
+        </li>
+    </ul>
+
+
+</body>
+
+</html>

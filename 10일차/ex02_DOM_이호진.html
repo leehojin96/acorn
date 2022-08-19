@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function drink(){
+            let after = document.getElementById("coffee")
+
+            after.style.backgroundColor = "brown";
+            after.style.color = "white"
+            after.style.width = "200px"
+            after.style.height = "200px"
+            after.style.fontSize = "30px"
+            after.style.textAlign = "center"
+            after.style.border = "5px dotted white"
+            after.innerHTML = "시급해"
+        }
+    </script>
+</head>
+<body>
+    <div id = "coffee">
+        아메리카노
+    </div>
+    <button onclick="drink()"> 수혈 </button>
+</body>
+</html>
