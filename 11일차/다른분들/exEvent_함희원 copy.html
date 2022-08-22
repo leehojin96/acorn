@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 auto;
+        }
+        input{
+            position: relative;
+            height: 25px;
+            
+        }
+        .hint1{
+            margin-top: 20px;
+            margin-left: 10px;
+            font-size: 15px;
+        }
+    </style>
+
+    <script>
+
+        function check(){
+            let answer =document.getElementById('answer').value;
+            if(answer==""){
+                alert("정답을 입력해주세요");
+            }
+            else if(answer=="한산"){
+                alert('축하합니다 정답입니다!');
+            }else{document.getElementById('answer').value ="";
+                alert('오답입니다');
+            }
+
+        }
+
+        function hint(){
+            alert("한국 영화");
+        }
+
+    </script>
+</head>
+<body>
+    
+    <h1>초성퀴즈</h1>
+    <br>
+    <h2>문제 : ㅎㅅ</h2>
+        <input type="text" class="answer" id="answer" placeholder="정답을 입력하세요">
+        <input type="button" onclick="check()" value="정답 확인">
+        <br>
+        <button class="hint1" id="hint" onclick="hint()">힌트</button>
+</body>
+</html>

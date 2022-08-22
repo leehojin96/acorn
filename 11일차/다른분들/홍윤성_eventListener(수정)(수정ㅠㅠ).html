@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .wrap{
+            display:flex;
+            width: 450px;
+            flex-wrap: wrap;
+            text-align: center;
+            line-height: 50px;
+        }
+        .btn{
+            background-color: orange;
+            
+            width: 200px;
+            height:50px;
+            border: 1px solid black;
+            
+        }
+        #member_info{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            display: none;   
+            background-color: burlywood;
+            /* 우선 안보이게 */
+        }
+        #xmember_info{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            display: none;
+            background-color:coral
+            /* 우선 안보이게 */
+        }
+    </style>
+    <script>
+        
+        function init(){
+            let member = document.getElementById("member");
+            let xmember = document.getElementById("xmember");
+            let member_info = document.getElementById("member_info");
+            let xmember_info = document.getElementById("xmember_info");
+            
+            //load를 이용한 초기 셋팅
+            // 가렸던 회원 정보입력 우선 보이게 하기
+            member_info.style.display = "block"
+            xmember_info.style.display = "none"
+            
+            member.addEventListener( "click", member_change);
+            xmember.addEventListener( "click", xmember_change);
+        }
+        function member_change(){
+            member_info.style.display = "block"
+            xmember_info.style.display = "none"
+        }
+        function xmember_change(){
+            member_info.style.display = "none"
+            xmember_info.style.display = "block"
+        }
+    </script>
+</head>
+<body onload="init()">
+    
+    <div class="wrap">
+        <div class="btn" id="member" onclick="member_change()">
+            회원
+        </div>
+        <div class="btn" id="xmember" onclick="xmember_change()">
+            비회원
+        </div>
+
+        <div id="member_info">
+            회원 정보입력
+        </div>
+        <div id="xmember_info">
+            비회원 정보입력
+        </div>
+    </div>
+</body>
+</html>

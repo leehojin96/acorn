@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #bye{ width: 300px;
+            height: 300px; 
+            font-size: 30px;
+            background-color: aqua;}
+    </style>
+    <script>
+        function on(){
+            alert("오늘은 맑지만..");
+
+            // let bye2= document.getElementById("bye");
+            // bye.addEventListener("mouseover", function(){
+            //     style="width: 100px; height:40px; background-color: blueviolet;"
+                
+            // })
+            
+            let bye2 = document.getElementById("bye");
+            bye.addEventListener("click", a)
+
+        }
+       
+        
+        function a(){
+            alert("비가옵니다!");
+        }
+    </script>
+</head>
+<body onload="on()">
+    
+    <button id="bye">내일은</button>
+
+</body>
+</html>

@@ -6,27 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-         function init() {
-            alert("문서로드 완료");
-            alert("이제 dom를 맘대로 접금하세요");
-            let btn = document.getElementById("btn");
-            //btn.addEventListener("click" , info);
 
+        function init(){
+            alert("load");
+
+            //하고 싶은 일
+            //클릭 버튼에 실제 click 이벤트 리스너 추가 : 클릭 되었을때 하고싶은 일을 등록하겠다.
+
+            let btn = document.getElementById("btn");
+            btn.addEventListener("click" , info);
+
+            //btn.addEventListener("click" , function(){});
             btn.addEventListener("click" , function(){
-                alert("hello 익명");
+                alert("hello익명");
             });
         }
-        function info() {
-            
+
+        function info(){
             alert("hello");
         }
-
-
     </script>
 </head>
-<body onload="init()">
-    
-    <button id="btn">클릭</button>
+<body onload = "init()">
+    <button id= "btn"> 클릭 </button>
     
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function init() {
+            alert("나의 이름은?");
+
+
+            let login = document.getElementById("join");
+            login.addEventListener("mouseover", over);
+            login.addEventListener("click", function () {
+                let name = document.getElementById("name").value
+
+                if (name == "이호진") {
+
+                    alert("정답!");
+                } else if (name == "") {
+                    alert("입력하시오.");
+                } else {
+                    alert("땡!");
+
+                }
+            })
+
+
+        }
+
+        function over() {
+            document.getElementById("sure").innerHTML = "확실해?"
+        }
+
+    </script>
+
+</head>
+
+<body onload="init()">
+
+    <input id="name" , placeholder="나의 이름은?">
+    <div id="sure"></div>
+    <button id="join"> 확인 </button>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function name(){
+            alert("자바스크립트");
+            let btn1 = document.getElementById("yeong");
+            let btn2 = document.getElementById("bin");
+
+
+            btn1.addEventListener( "click", function(){
+                    alert("어렵다 어려워");
+                });
+
+
+            btn2.addEventListener( "click", easy);
+        }         
+
+         function easy(){
+            alert("쉽다 쉬워");
+        }
+
+    </script>
+    <style>
+
+        button{
+            color: white;
+            background-color: black;
+            width: 200px;
+            height: 100px;
+                      
+        }
+    </style>
+</head>
+<body onload = "name()">
+    
+    <button id="yeong">버튼</button>
+    <button id="bin">버튼</button>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function init(){
+            
+
+            let btn =document.getElementById('btn');
+            btn .addEventListener('click' , info);
+
+            btn.addEventListener('click', function(){
+               let bb= prompt('몇살이죠?');
+                alert(bb);
+      
+        })
+        } 
+
+        function info(){
+            let aa=prompt('이름이머죠?');
+           alert(aa);}
+
+        
+        
+    </script>
+    
+</head>
+<body onload="init()">
+
+    <button id="btn">누구야?</button>
+ 
+
+    
+</body>
+</html>
