@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function callback1( ){
+            alert("callback1");
+
+        }
+        let callback2 = function(){
+            alert("callback2");
+
+        }
+
+        function func1(f){
+            alert("1초 뒤에 func1 호출");
+            f(); //함수호출
+        }
+        callback1();
+        callback2();
+
+        func1( callback1 ); //함수호출시에 함수정보를 전달해줌
+        func1( callback2 );
+
+
+
+
+        func1(function(){
+        
+            alert("callback3");
+        });
+
+        setTimeout(callback1 , 1000);
+        setTimeout(function(){
+            alert("hi");
+        } , 1000);
+
+        setTimeout(() => {
+            
+        }, timeout);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
