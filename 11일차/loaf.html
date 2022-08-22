@@ -10,7 +10,11 @@
             alert("문서로드 완료");
             alert("이제 dom를 맘대로 접금하세요");
             let btn = document.getElementById("btn");
-            btn.addEventListener("click" , info);
+            //btn.addEventListener("click" , info);
+
+            btn.addEventListener("click" , function(){
+                alert("hello 익명");
+            });
         }
         function info() {
             alert("hello");
@@ -20,6 +24,7 @@
     </script>
 </head>
 <body onload="init()">
+    
     <button id="btn">클릭</button>
     
 </body>
