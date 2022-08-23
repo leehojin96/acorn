@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head_wrap {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        table {
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 900px;
+        }
+
+        #button_wrap {
+            width: 898px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 25px 0px 25px 0px;
+            border: 0.5px solid rgb(216, 216, 216);
+            border-top: none;
+        }
+
+        table,
+        td {
+            border: 0.5px solid rgb(216, 216, 216);
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 3px 0px 3px 1px;
+        }
+
+        #info_wrap td:nth-child(1) {
+            text-align: center;
+        }
+
+        input,
+        select,
+        button {
+            border: 0.5px solid rgb(216, 216, 216);
+            height: 30px;
+        }
+
+        select,
+        button {
+            width: 150px;
+        }
+
+        #pwwarning {
+            font-size: 12px;
+            color: red;
+        }
+
+        button:hover {
+            background-color: rgb(190, 190, 190);
+        }
+    </style>
+    <script>
+
+        function join() {
+
+            let frm = document.frm;
+            let username = frm.username;
+            let userid = frm.userid;
+            let userpw = frm.userpw;
+            let userpwcheck = frm.userpwcheck;
+
+            if (username.value == "") {
+                alert("이름을 입력하시오.");
+                username.focus();
+            } else if (userid.value == "") {
+                alert("아이디를 입력하시오.");
+                userid.focus();
+            } else if (userpw.value == "") {
+                alert("비밀번호를 입력하시오.");
+                userpw.focus();
+            } else if (userpwcheck.value == "") {
+                alert("비밀번호 확인을 입력하시오.");
+                userpwcheck.focus();
+            } else {
+                alert("로그인");
+                frm.submit();
+            }
+
+        }
+        function pwcheck() {
+            let frm = document.frm;
+            let userpw = frm.userpw;
+            let userpwcheck = frm.userpwcheck;
+
+            if (userpw.value == "") {
+                alert("비밀번호를 입력하세요.");
+                userpw.focus();
+            } else if (userpwcheck.value == "") {
+                alert("비밀번호 확인을 입력하세요.");
+                userpwcheck.focus();
+            } else if (userpw.value == userpwcheck.value) {
+                alert("비밀번호가 같습니다.");
+            } else {
+                alert("비밀번호가 다릅니다.");
+                userpw.focus();
+            }
+        }
+
+        
+        function setDomain(){
+            let frm = document.frm;
+            let domain = frm.domain;
+
+            let domainText = domain.options[domain.selectedIndex].text; //옵션과 옵션사이
+            let domainValue = domain.options[domain.selectedIndex].value;
+            
+            let emailDomain = frm.email;
+            emailDomain.value = domainText;
+
+
+        }
+        function reset(){
+            
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="head_wrap">
+        <h3>
+            회원가입
+        </h3>
+    </div>
+    <form action="" name="frm" method="post">
+        <div id="info_wrap">
+            <table>
+                <tr>
+                    <td>이름</td>
+                    <td><input name="username" type="text" placeholder="이름"></td>
+                </tr>
+
+                <tr>
+                    <td>아이디</td>
+                    <td>
+                        <input name="userid" type="text" placeholder="아이디">
+                        <button type="button">중복확인</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>비밀번호</td>
+                    <td>
+
+                        <input name="userpw" type="password" placeholder="비밀번호">
+                        <div id="pwwarning">※비밀번호는 8자리 이상 영문 숫자로 작성해 주세요.</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>비밀번호 확인</td>
+                    <td>
+                        <input name="userpwcheck" type="password" placeholder="비밀번호 확인">
+                        <button type="button" onclick="pwcheck()">비밀번호 확인</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>이메일</td>
+                    <td><input type="text"> <span>@</span> <input name="email" type="text">
+                        <select onchange="setDomain()" name="domain">
+                            <option value="0">선택하세요</option>
+                            <option value="01">naver.com</option>
+                            <option value="02">google.com</option>
+                        </select>
+                        <button type="button">중복확인</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>학년/반</td>
+                    <td>
+                        <select>
+                            <option>선택하세요</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <span>학년</span>
+                        <select>
+                            <option>선택하세요</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                        <span>반</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="button_wrap">
+            <button type="button" onclick="join()">가입</button>
+            <button type="button" onclick="reset()">취소</button>
+            
+        </div>
+    </form>
+</body>
+
+</html>

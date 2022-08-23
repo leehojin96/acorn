@@ -25,8 +25,8 @@
         function createLotto(){
              //alert("call");
              //로또 영역 초기화
-            let lotto_wrap = document.getElementById("lotto_wrap");           
-           lotto_wrap.innerHTML="";             
+             let lotto_wrap = document.getElementById("lotto_wrap");           
+             lotto_wrap.innerHTML="";             
              //1.로또번호 생성하기  8,12,37,44,3,7          
              let lottoNumbers = getLottoNumbers();   // let lottoNumbers = [8,12,37,44,3,7];
              alert( lottoNumbers); 
@@ -40,26 +40,17 @@
              }              
             
         }
-
+        // 2번째 버전
         function getLottoNumbers(){
-
-            let lottoNumbers = new Array(45);
-            
-            for( let i=0; i<lottoNumbers.length; i++){
-                lottoNumbers[i]=0;
-            }            
-            
-            for(let i=0; i<lottoNumbers.length ; i++){
-                let random  =Math.floor( Math.random() * 45 )  +1  ; 
-                lottoNumbers[i] = random;
-            }                                        
-            
-            let lottoNumber_rtn= new Array(6);
-            for( let i=0; i<lottoNumber_rtn.length; i++){
-                lottoNumber_rtn[i] =  lottoNumbers[i];
+            let lottoNumbers =new Array(6);   // 진짜로또번호 반환;
+            for( let i=0; i<6; i++){
+                random  =  Math.floor(Math.random()  *45 )  +1 ; // 0+1~ 44+1 =>  1~45값
+                lottoNumbers[i]= random;
             }
-            return lottoNumber_rtn;
-        }       
+            return lottoNumbers;
+        }         
+
+            
 
     </script>
 </head>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball{
+            display: inline-block;
+            width:50px;
+            height: 50px;
+            background-color: aqua;
+            text-align: center;
+            font-size: 20px;
+            line-height: 50px;
+            border-radius: 50%; /*둥글게*/
+        }
+    </style>
+
+    <!-- 질문
+        1. 
+        2. 
+    -->
+    <script>
+
+        function createLotto() {                                    // 1. 버튼 클릭시 실행할 로또 머리 함수 /
+
+            let lotto_wrap = document.getElementById("lotto_wrap"); // 2 . 로또 번호 위치 변수 생성 및 입력
+
+            lotto_wrap.innerHTML = "";                              //자리 초기화
+
+            let lottonumbers = getLottoNumbers();                   //로또 번호 생성
+
+            for (let i = 0; i < lottonumbers.length; i++) {        //공 생성 반복문
+                let ball = document.createElement("div");           //ball 공간 생성
+                ball.classList.add("ball");                         //클래스의 목록에 쉽게 접근 / add: 클래스 추가 style 변경 위해
+                ball.innerHTML = lottonumbers[i];                   //ball에 로또 번호 넣기
+                lotto_wrap.appendChild(ball);                       //ball을 넣을 주소 지정 
+            }
+
+
+
+        }
+
+        function getLottoNumbers() {                                //로또 번호 생성 함수
+            let lottonumbers = new Array(45);
+            for(let i = 0 ; i < lottonumbers.length ; i++){
+                
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <button onclick="createLotto()"> 생성 </button>
+    <div class="lotto_wrap" id="lotto_wrap"></div>
+</body>
+
+</html>

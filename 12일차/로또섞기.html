@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        function createLotto(){
+            let origin = new Array(45).fill().map(function(value, index ){
+                return index+1;
+            });
+
+            let newArr= [];
+           //alert(origin);
+         
+           while(origin.length > 0){
+            let randomIndex = Math.floor(Math.random() * origin.length);
+            //0~44중 하나 발생
+            let removed = origin.splice(randomIndex ,1); //원본배열에서 제거
+            let value = removed[0]; //제거된 index번쨰의 요소값을 반환
+            newArr.push(value);
+           }
+           console.log(newArr);
+        }
+        
+    </script>
+    
+    <button onclick="createLotto()"> 로또 번호 </button>
+</body>
+</html>

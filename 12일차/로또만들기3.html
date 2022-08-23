@@ -42,18 +42,18 @@
         }
 
         function getLottoNumbers(){
-
+            //alert("call");
             let lottoNumbers = new Array(45);
-            
+            //배열초기화 
             for( let i=0; i<lottoNumbers.length; i++){
                 lottoNumbers[i]=0;
             }            
-            
+            //
             for(let i=0; i<lottoNumbers.length ; i++){
                 let random  =Math.floor( Math.random() * 45 )  +1  ; 
                 lottoNumbers[i] = random;
-            }                                        
-            
+            }                                        //    0  1    2    3    4    5     6   7   8 
+            //6개만 담기                             //    8   9   42   41   39   18    27  13  21
             let lottoNumber_rtn= new Array(6);
             for( let i=0; i<lottoNumber_rtn.length; i++){
                 lottoNumber_rtn[i] =  lottoNumbers[i];
