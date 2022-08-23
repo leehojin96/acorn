@@ -10,15 +10,35 @@
     
     <script>
 
-        let arr=[2,4,6,8];
-        let newArr = new Array(4);
-                                                //0, 1, 2, 3
-        for (let i = 0 ; i < arr.length ; i++){ //4,16,36,64
-            newArr[i] = arr[i] * arr[i];
+        let arr = [2,4,6,8];
+        
+        /*
+        let newArr = Array(4);
+        for(let i = 0 ; i < newArr.length ; i++){
+            newArr = arr[i] * arr[i];
         }
-
         alert(newArr);
+        */
 
+
+        //1.map.ex
+        let newArr = arr.map(function(value){
+            return value * value ;
+        });
+        console.log(newArr);
+
+
+        //2.map.ex
+        let newArr1 = arr.map(function(v,i){
+            return v*i;
+        });
+        console.log(newArr1);
+
+        //3.map.ex
+        let newArr2 = new Array(10).fill().map(function(v,i){
+            return i + 1;
+        });
+        console.log(newArr2);
 
         
     </script>
