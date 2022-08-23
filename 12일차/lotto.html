@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i = 0 ; i < lottoNumbers.length ; i++){
+            let ball = document.createElement("div");
+            ball.classList.add("ball");
+            ball.innerHTML = lottoNumbers[i];
+            lotto_wrap.appendchild(ball);
+            // 기능 로또 번호 숫자 6개 변환
+
+        }
+        
+        function getLottoNumbers(){
+             let lottoNumbers = new Array(6);
+             for (let i = 0 ; i < 6 ; i++){
+                random = Math.floor(Math.random()*45)+1;
+             }   
+             lottoNumbers[i] = random;
+             return lottoNumbers;
+            }
+            
+    </script>
+</body>
+</html>
