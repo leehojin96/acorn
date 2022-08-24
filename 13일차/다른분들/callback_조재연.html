@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width:150px;
+            height: 70px;
+            color: white;
+            background-color: rgb(37, 33, 41);
+            border: black;
+            border-radius: 30%;
+        }
+    </style>
+     <script>
+            function a(x,y) {
+                let sum =x+y;
+                let min=(x>=y)? x-y:y-x;
+                let mul=x*y;
+                let div=(x>=y)? x/y:y/x;
+                b(x,y,sum, min, mul, div);  
+            }
+    
+            function b(x,y,i,j,k,l) {
+                let dody= document.getElementById("dody");
+                let a1= document.createElement("div");
+                a1.style.display="block";
+                a1.style.height="120px";
+                a1.style.backgroundColor="black";
+                a1.style.color="white";
+                a1.style.padding="30px";
+                a1.innerHTML="첫번째 값은"+x+" 이며, 두번째 값은"+y+" 입니다 <br>두 수를 더 한 값은"+i+" 입니다. <br> 두 수를 뺀 값은"+j+" 입니다. <br> 두 수를 곱한 값은"+k+" 입니다. <br> 두 수를 나눈 값은"+l+" 입니다.";
+                dody.appendChild(a1)}
+            
+            function c() {
+                let x= Math.floor(Math.random()*101);
+                let y= Math.floor(Math.random()*101)+1;
+                a(x,y);
+            }
+    </script>
+</head>
+<body id="dody">
+    <button onclick="a(3,5)">눌러보세요</button>
+    <button onclick="a(40,7)">눌러보세요</button>
+    <button onclick="c()">이건 랜덤입니다</button>
+</body>
+</html>

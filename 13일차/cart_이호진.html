@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cart_wrap {
+            width: 900px;
+            margin: 50px auto;
+            font-size: 12px;
+        }
+
+        table {
+            width: 900px;
+            border-collapse: collapse;
+
+        }
+
+        table tr {
+            height: 40px;
+        }
+
+        table,
+        td,
+        th {
+            border: 0.2px solid gray;
+        }
+
+        td:nth-child(5),
+        td:nth-child(3) {
+            text-align: right;
+        }
+
+        table caption {
+            font-weight: bold;
+            font-size: 20px;
+            padding: 30px;
+        }
+
+        .order {
+            width: 900px;
+            border: 0.2px solid gray;
+            height: 60PX;
+            text-align: right;
+            line-height: 60px;
+            font-weight: bold;
+            color: red;
+
+
+        }
+
+        .delectbtn {
+            margin: 20px 20px 20px 3px;
+        }
+    </style>
+    <script>
+
+        function calPrice(obj) {                                               // 함수명 'calPrice'   /   매게변수 'obj'
+            let qty = (obj.value == "") ? 0 : parseInt(obj.value);             //'obj 값이 빈칸이라면? 참(0 출력) : 거짓(obj.value의 정수값 출력) 을 'qty'에 입력
+                                                                               //html의 input에 입력되는 값이 script에는 숫자로 입력되는게 아니니 이런식으로 if 문을 써서 시작하는듯 함
+
+            let unitTd = obj.parentElement.previousElementSibling;             //'obj'의 부모요소 이전의 형제요소를 'unitTd'에 입력
+            let priceTd = obj.parentElement.nextElementSibling;                //'obj'의 부모요소 다음의 형제요소를 'priceTd'에 입력
+            let unit = parseInt(unitTd.innerHTML);                             //'unitTd.innerHTML'정수 값을 unit에 입력
+            let price = qty * unit;                                            //'qty' * 'unit' 값을 'price'에 입력
+            priceTd.innerHTML = price;                                         //'price'를 rpiceTd.innerHTML에 입력
+
+            
+
+            totalprice();                                                       // 전체합계금액 다시 구하기
+        }
+
+
+        function totalprice(){
+
+
+            let tbody = document.querySelector("#cart");                        //'cart'라는 큰 틀의 데이터 불러와서 'tbody'에 입력
+            let trs = tbody.querySelectorAll("tr");                             //'tbody'의 모든 'tr' 요소 데이터들을 'trs'에 입력
+            let sum=0;                                                          //'sum' 변수 선언
+
+            for(let i = 0 ; i<trs.length ; i++){                                //'trs'길이 만큼 아래 반복
+                let tr = trs[i];                                                //'trs[i]' 각 인데스 마다 'tr'에 입력
+                let priceTd = tr.lastElementChild;                              //'tr'의 마지막 자식 요소를 'priceTd'에 입력
+                let price = parseInt(priceTd.innerHTML);                        //'priceTd.innerHTML'의 정수값을 'price'에 입력
+                sum += price;                                                   //'sum'에 'price'값 누적 
+            }
+
+            //order-price
+            let order_price = document.querySelector("#order-price");           //'order-price'의 데이터 요소를 'order_price'에 입력
+            order_price.innerHTML = sum;                                        //'sub'을 'order-price.innerHTML'에 입력
+        }
+
+
+
+        function deleteItem() {
+
+            let tbody = document.querySelector("#cart");                        //'cart'라는 큰 틀의 데이터 불러와서 'tbody'에 입력
+            let items = tbody.querySelectorAll("input[type='checkbox']");       //'tbody'에서 'input[type='checkbox']'라는 모든 데이터 요소들을 불러와서 'items'에 입력
+
+            for (let i = items.length; i > 0; i--) {                            //'items' 길이 만큼 아래를 반복할거야
+                let checkbox = items[i - 1];                                    //'items' 마지막 인덱스부터 시작해서 값을 'checkbox'에 입력
+                if (checkbox.checked) {                                         //'checkbox'가 ckecked 라면? (체크면 1 논체크면 0 출력)
+                    let tr = checkbox.parentElement.parentElement;              //'tr'에 checkbox의 부모요소의 부모요소 입력
+                    tbody.removeChild(tr);                                      //'tbody'의 자식 중 'tr' 제거
+                }
+            }
+
+        }
+        
+
+
+    </script>
+</head>
+
+<body>
+    <div class="cart_wrap">
+        <!-- cart -->
+
+        <table>
+            <caption> CART LIST </caption>
+            <thead>
+                <tr>
+                    <th>선택</th>
+                    <th>상품명</th>
+                    <th>가격</th>
+                    <th>구매수량</th>
+                    <th>구매가격</th>
+                </tr>
+            </thead>
+            <tbody id="cart">
+                <tr>
+                    <td><input type="checkbox">선택</td>
+                    <td>헤드폰</td>
+                    <td>30000</td>
+                    <td><input type="text" value="1" onkeyup="calPrice(this)"></td>
+                    <td >30000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">선택</td>
+                    <td>헤드폰</td>
+                    <td>30000</td>
+                    <td><input type="text" value="1" onkeyup="calPrice(this)"></td>
+                    <td>30000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">선택</td>
+                    <td>헤드폰</td>
+                    <td>30000</td>
+                    <td><input type="text" value="1" onkeyup="calPrice(this)"></td>
+                    <td>30000</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <!-- footer -->
+        <div>
+            <div class="delectbtn">
+                <button onclick="deleteItem()">선택삭제</button>
+                <div class="order">
+                    합계 <span id="order-price">35000</span>원
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

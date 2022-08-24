@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 3. 알겠어! 나는 스테이크를 구울줄 알아!
+        function mainfunction(callback){ //너가 준 생고기 잘 받았어!
+            alert("여기는 메인함수: 조리중!")      //여기부터는 내 조리법
+            callback();                  //너가 준 생고기 잘 활용했어!
+            return               //요리는 끝났어 이제 돌려줄께!
+        }
+        
+        
+        // 2. 이게 내가 갖고 있는 재료야 한우안심 생고기(함수나 숫자)
+        function callback(){
+            alert("여기는 콜벡이야: 생고기")
+            return 
+        }
+
+        // 1. 나 맛있는 스테이크가 먹고 싶어!.
+        //    근데 요리는 할 줄 몰라!. 대신 한우안심(함수나 숫자)은 가지고 있어!
+        
+        mainfunction(callback);
+        alert("스테이크 얌얌")
+
+        
+
+    </script>
+</body>
+</html>

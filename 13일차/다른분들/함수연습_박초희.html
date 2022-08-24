@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 연습</title>
+
+</head>
+<body>
+    
+    <script>
+        
+        // 연습
+        // 책의 총 가격
+        
+        let books3 = [
+            {
+                title: "책1",
+                price: 12000
+            },
+            {
+                title: "책2",
+                price: 13000
+            },
+            {
+                title: "책3",
+                price: 14000
+            }
+        ]
+        // alert(books[0].price);
+
+        // 콜백함수
+        function total(book){
+            let sum = 0;
+            for(let i=0; i<book.length; i++){
+                sum += book[i].price;
+            }
+            return sum;
+        }
+        // alert(total(books3));
+
+        function bookTotal(book, f){
+            let price = f(book);
+            let n = book.length;
+            alert("책 " + n + "권의 가격은 " + price + "원 입니다." );
+        }
+
+        bookTotal(books3, total);
+
+
+    </script>
+
+</body>
+</html>

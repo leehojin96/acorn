@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cnt() {
+            let checkbox = document.querySelectorAll("input[type='checkbox']");
+            let cnt = 0;
+            for (let i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked) {
+                    cnt += 1;
+                }
+            }
+            alert(cnt);
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+    <input type="checkbox">삭제
+    <input type="checkbox">삭제
+    <input type="checkbox">삭제
+    <input type="checkbox">삭제
+    <input type="checkbox">삭제
+
+    <button onclick="cnt()">선택확인</button>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let x = [{ type: "가슴", name: "dips", weight: 80 },
+        { type: "등", name: "row", weight: 80 },
+        { type: "하체", name: "squat", weight: 120 }];
+        
+
+        function morethan100(i) {
+
+            if (x[i].weight > 100) {
+                console.log(x[i].type + " " + x[i].name + " " + x[i].weight + "kg");
+
+            }
+        }
+
+        function check(a) {
+
+            for (let i = 0; i < x.length; i++) {
+                a(i);
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <button onclick="check(morethan100)">100키로 이상 기록한 운동은?</button>
+</body>
+
+</html>

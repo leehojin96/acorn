@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+              
+        function cc(f){
+                f();   
+        }
+
+        function lunch1(){
+            let a1 = document.createElement("a");
+            a1. innerHTML="싸다김밥";
+            a1. href = "https://map.naver.com/v5/entry/place/1941805575?c=14128658.8065124,4516562.9483194,13,0,0,0,dh&placePath=%2Fhome&entry=plt";
+            let a = document. getElementById("a");
+            a. appendChild(a1);
+        }
+        
+        function lunch2(){
+            let a1 = document.createElement("a");
+            a1. innerHTML="노브랜드버거";
+            a1. href="https://map.naver.com/v5/entry/place/1244364095?c=14128892.3548041,4516671.9539138,13,0,0,0,dh&placePath=%2Fhome&entry=plt";
+            let a = document. getElementById("a");
+            a. appendChild(a1);
+        }
+        
+
+
+    </script>
+    
+
+    <button onclick="cc(lunch1)">싸다김밥</button>
+    <button onclick="cc(lunch2)">노브랜드버거</button>
+    
+    
+    <div class="wrap" id="a">
+        
+    </div>
+
+</body>
+</html>
