@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #gallery {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: relative;
+
+            background-image: url("media/Penguins.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .left_btn {
+            width: 30px;
+            height: 30px;
+            border: 0.2px solid black;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+
+
+            position: absolute;
+            left: 10px;
+            top: 130px;
+
+        }
+
+        .right_btn {
+            width: 30px;
+            height: 30px;
+            border: 0.2px solid black;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+
+            position: absolute;
+            right: 10px;
+            top: 130px;
+        }
+    </style>
+    <script>
+        let imgNames = ["media/Penguins.png",
+            "media/Lighthouse.png",
+            "media/Chrysanthemum.png",
+            "media/Desert.png",
+            "media/Hydrangeas.png",
+            "media/Jellyfish.png",
+            "media/Koala.png",
+            "media/Tulips.png"];
+
+            let i = 0;
+
+
+        function previousImg() {
+
+            i--;
+            if(i<0){
+                i += imgNames.length
+            }
+
+
+
+            i= i% imgNames.length; 
+            alert(i+1 +" 번째 사진");
+
+            
+            //alert("a");   
+            let gallery = document.getElementById("gallery")
+            gallery.style.backgroundImage ="url('"+ imgNames[i] +"')"; 
+            gallery.style.backgroundPosition="center"
+            gallery.style.backgroundSize="cover";
+
+            
+
+        }
+
+        
+        function nextImg() {
+            //alert("b");
+
+            i++;
+            i=i% imgNames.length; // i = 8 되면 0으로 돌아가기
+            alert(i+1 +" 번째 사진");
+            
+            let gallery = document.getElementById("gallery")
+            gallery.style.backgroundImage ="url('"+ imgNames[i] +"')"; 
+            gallery.style.backgroundPosition="center"
+            gallery.style.backgroundSize="cover";
+
+            
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="gallery">
+        <div class="left_btn" onclick="previousImg()">◁</div>
+        <div class="right_btn" onclick="nextImg()">▷</div>
+    </div>
+</body>
+
+</html>

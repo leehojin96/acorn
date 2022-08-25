@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            border: 20px ridge wheat;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        let imgNames= ["media/Penguins.png", 
+             "media/Lighthouse.png",
+             "media/Chrysanthemum.png",
+             "media/Desert.png",
+             "media/Hydrangeas.png",
+             "media/Jellyfish.png",
+             "media/Koala.png",
+             "media/Tulips.png"
+        ] ;
+ //이미지배열의 index를 의미 (1 => 두번째 부터)
+
+        let next = 1;
+        function changeImg( obj){
+            obj.src = imgNames[next];
+            next++;
+            next = next % imgNames.length;  // 8 & 8 = 0
+            alert(next);
+        }
+    </script>
+</head>
+<body>
+    <img src="./media/Penguins.png" alt="이미지갤러리" onclick="changeImg(this)">
+    <!--<button onclick="changeImg()"> 클릭 </button>-->
+
+</body>
+</html>

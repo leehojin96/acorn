@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function calPrice(obj) {
+
+            //변경된 수량 * 가격 = 값을 구매가격에 표시 그리고 각 구매가격들의 합계를 표시
+
+            let qty = (obj.value == "") ? 0 : parseInt(obj.value);
+
+            let unitTd = obj.parentElement.previousElementSibling;
+            let priceTd = obj.parentElement.nextElementSibling;
+            let unit = parseInt(unitTd.innerHTML);
+            let price = qty * unit;
+
+            priceTd.innerHTML = price;
+            
+
+            totalPrice();
+
+        }
+
+        function totalPrice(){
+
+            //"order-price"에 각 price 합계 넣기
+
+            let sum = 0;
+            //let tbody = document.querySelector("#cart");   
+            //let trs = tbody.querySelectorAll("tr");
+            trs = document.querySelector("#total")
+            
+            for(let i = 0 ; i < trs.length ; i++){
+                let tr = trs[i];
+                let priceTd  = tr.lastElementChild;
+                let price = parseInt(priceTd.innerHTML);
+                alert(price);
+                sum += price;
+            }
+
+            let order_price = document.querySelector("#order-price");           //'order-price'의 데이터 요소를 'order_price'에 입력
+            order_price.innerHTML = sum;       
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="cart_wrap">
+        <table>
+
+            <caption> CART LIST </caption>
+            <thead>
+                <tr>
+                    <th>선택</th>
+                    <th>상품명</th>
+                    <th>가격</th>
+                    <th>가격수량</th>
+                    <th>구매가격</th>
+                </tr>
+            </thead>
+            <tbody id="cart">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>헤드폰</td>
+                    <td>30000</td>
+                    <td><input type="text" value="1" onkeyup="calPrice(this)"></td>
+                    <td id="total">30000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>헤드폰</td>
+                    <td>30000</td>
+                    <td><input type="text" value="1" onkeyup="calPrice(this)"></td>
+                    <td id="total">30000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>헤드폰</td>
+                    <td>30000</td>
+                    <td><input type="text" value="1" onkeyup="calPrice(this)"></td>
+                    <td id="total">30000</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <div>
+            <div>
+                <button class="deletebtn">선택 삭제</button>
+            </div>
+            <div class="order">
+                합계<span id="order-price">30000</span>원
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

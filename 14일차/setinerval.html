@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let out;
+
+        function init(){
+            out = setInterval(function(){
+                alert("hi");
+            },1000)
+        }
+
+        function stop(){
+            clearTimeout(out);
+        }
+
+    </script>
+</head>
+
+<body onload="init()">
+
+    <button onclick="stop">그만</button>
+
+</body>
+
+</html>

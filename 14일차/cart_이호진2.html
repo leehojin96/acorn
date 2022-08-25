@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cart_wrap{
+            width:900px;
+            margin:50px auto;
+            font-size: 12px;
+        }
+
+        table{
+            width: 900px;
+            border-collapse: collapse;
+            border:1px  solid rgb(25, 24, 24);
+        }
+        table tr{
+            height: 40px;
+        }
+
+        td, th{
+            border:0.2px  solid gray;
+            padding: 10px;
+        }
+
+        td:nth-child(5), td:nth-child(3){
+            text-align: right;
+        }
+
+        td:nth-child(1), td:nth-child(2){
+            text-align: center;
+        }
+
+        table caption{
+            font-weight: bold;
+            font-size: 20px;
+            padding: 30px;
+        }
+
+        .order{
+            width: 900px;
+            border:0.2px  solid gray;
+            height: 60px;
+            text-align: right;
+            line-height: 60px;  
+            font-weight: bold;
+            padding-right: 10px;
+            box-sizing: border-box;            
+            color: red;         
+            
+        }
+
+        .deletebtn{
+           margin: 20px 20px 20px 3px;
+        }
+    </style>
+    <script>
+
+
+        function calPrice(obj) {
+
+            //alert(obj.value);
+            let qty = (obj.value == "") ? 0 : parseInt(obj.value);
+            //alert(qty);
+            let unitTd = obj.parentElement.previousElementSibling;
+            //alert(unitTd.innerHTML);
+            let priceTd = obj.parentElement.nextElementSibling;
+            //alert(priceTd.innerHTML);
+            let unit = parseInt(unitTd.innerHTML);
+            //alert(unit);
+            let price = qty * unit;
+
+            priceTd.innerHTML = price;
+
+
+            totalPrice();
+        }
+        function totalPrice() {
+
+            let tbody = document.querySelector("#cart");
+            let trs = tbody.querySelectorAll("tr");
+            let sum = 0;
+
+            for (let i = 0; i < trs.length; i++) {
+                let tr = trs[i];
+                //alert(tr.innerHTML);
+                let priceTd = tr.lastElementChild;
+                //alert(priceTd.innerHTML);
+                let price = parseInt(priceTd.innerHTML);
+                //alert(price);
+                sum += price;
+                //alert(sum);
+
+            }
+
+            let  order_price  =document.querySelector("#order_price");
+            order_price.innerHTML= sum;
+
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="cart_wrap">
+<!--cart영역-->
+        <table>
+            <caption>
+                B마트 장바구니
+            </caption>
+            <thead>
+                <tr>
+                    <th>선택</th>
+                    <th>이미지</th>
+                    <th>상품명</th>
+                    <th>가격</th>
+                    <th>수량</th>
+                    <th>주문 금액</th>
+                </tr>
+            </thead>
+            <tbody id="cart">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td></td>
+                    <td>사과 1봉지 (5개)</td>
+                    <td>6000</td>
+                    <td><input type="number" min="0" value="1" onchange="calPrice(this)"></td>
+                    <td>6000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td></td>
+                    <td>레몬 1봉지 (10개)</td>
+                    <td>5000</td>
+                    <td><input type="number" min="0" value="1" onchange="calPrice(this)"></td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td></td>
+                    <td>아보카도 (5개)</td>
+                    <td>3000</td>
+                    <td><input type="number" min="0" value="1" onchange="calPrice(this)"></td>
+                    <td>3000</td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+<!--footer 영역-->
+            <div class="deletebtn">
+                <button>선택 삭제</button>
+            </div>
+            <div>
+            </div>
+            <div class="order">
+                총 <span id="order_price">17000</span>원
+                <span id="delivery">
+                    + 배달팁 <span id="delivery_price">3000</span>원
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
