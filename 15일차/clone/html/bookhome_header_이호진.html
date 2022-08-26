@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+
+            font-family: 'Noto Sans KR', sans-serif;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        header {
+            width: 1000px;
+            height: 130px;
+            margin: auto;
+            display: flex;
+        }
+
+        header a {
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+        }
+
+        .logo_area {
+            width: 200px;
+            height: 130px;
+
+        }
+
+        .logo {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 30px;
+            display: inline-block;
+            margin-left: 60px;
+            margin-top: 50px;
+            color: rgb(94, 105, 155);
+
+        }
+
+        .search_area {
+            width: 600px;
+            height: 130px;
+        }
+
+        .search_wrap {
+            width: 400px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid rgb(94, 105, 155);
+            border-radius: 3px;
+            margin: auto;
+            margin-top: 40px;
+            padding-left: 10px;
+            display: flex;
+        }
+
+        .search {
+            width: 350px;
+            height: 30px;
+            margin: auto;
+            border: 0;
+        }
+
+        .search:focus {
+            outline: none;
+        }
+
+        .search_btn {
+            background-image: url(../image/search.png);
+            background-position: center;
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            margin: 10px auto;
+            cursor: pointer;
+        }
+
+
+
+        .servicemenu_area {
+            width: 200px;
+            height: 130px;
+            position: relative;
+        }
+
+        .servicemenu {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+
+        .gard {
+            font-size: 6px;
+            color: rgb(175, 175, 175);
+        }
+
+
+
+        nav {
+            height: 60px;
+            background-color: rgb(94, 105, 155);
+            
+        }
+
+        .menu_wrap {
+            width: 1000px;
+            height: 60px;
+            display: flex;
+            list-style: none;
+            margin: auto;
+        }
+        .menu1{
+            width: 100px;
+            height: 200px;
+            margin: 0px 25px;
+        }
+        .menu1 a{
+            text-decoration: none;
+            color: white;
+            line-height: 60px;
+        }
+        .menu1 ul{
+            display: none;
+        }
+
+        .menu1:hover ul{
+            list-style: none;
+            display: block;
+            width: 100px;
+            height: 180px;
+            background-color: rgb(236, 236, 236);   
+            text-align: center;
+        }
+        .munu1.hover ul li{
+            padding: 10px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--헤더-->
+    <header>
+        <!--로고 영역-->
+        <div class="logo_area">
+            <h1>
+                <a class="logo" href="bookhome.html">
+                    지구문고
+                </a>
+            </h1>
+        </div>
+        <!--검색 영역-->
+        <div class="search_area">
+            <div class="search_wrap">
+                <input class="search" type="text">
+                <div class="search_btn"></div>
+            </div>
+        </div>
+        <!--네비게이션 영역-->
+        <div class="servicemenu_area">
+            <div class="servicemenu">
+                <a href="login.html">로그인</a>
+                <span class="gard">|</span>
+                <a href="mypage.html">마이페이지</a>
+                <span class="gard">|</span>
+                <a href="cart.html">장바구니</a>
+            </div>
+        </div>
+    </header>
+    <!--메뉴-->
+    <nav>
+        <ul class="menu_wrap">
+            <li class="menu1"> <a href="">국내도서</a>
+                <!-- 숨김상세메뉴-->
+                <ul>
+                    <li>소설</li>
+                    <li>시/에세이</li>
+                    <li>경영/경제</li>
+                    <li>자기계발</li>
+                </ul>
+            </li>
+            <li class="menu1"> <a href="">외국도서</a>
+                <!-- 숨김상세메뉴-->
+                <ul>
+                    <li>소설</li>
+                    <li>시/에세이</li>
+                    <li>경영/경제</li>
+                    <li>자기계발</li>
+                </ul>
+            </li>
+            <li class="menu1"> <a href="">eBook</a>
+                <!-- 숨김상세메뉴-->
+                <ul>
+                    <li>소설</li>
+                    <li>시/에세이</li>
+                    <li>경영/경제</li>
+                    <li>자기계발</li>
+                </ul>
+            </li>
+            <li class="menu1"> <a href="">웹소설</a>
+                <!-- 숨김상세메뉴-->
+                <ul>
+                    <li>웹소설</li>
+                    <li>웹툰</li>
+                </ul>
+            </li>
+            <li class="menu1"> <a href="">음반</a>
+                <!-- 숨김상세메뉴-->
+                <ul>
+                    <li>음반</li>
+                    <li>DVD</li>
+                    <li>블루레이</li>
+                </ul>
+            </li>
+            <li class="menu1"> <a href="">중고도서</a>
+                <!-- 숨김상세메뉴-->
+                <ul>
+                    <li>중고도서판매</li>
+                    <li>중고도서구매</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
