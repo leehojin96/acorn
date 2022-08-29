@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+            width: 1600px;
+            height: 700px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+        }
+        ul{
+            text-decoration: none;
+            list-style: none;
+            text-align: center;
+            margin: 0 auto;
+        }
+        li{
+            list-style: none;
+        }
+        span{
+            color: silver;
+            font-weight: bold;
+        }
+        p{
+            font-weight: bold; 
+        }
+        .left_btn{
+            width: 50px;
+            height: 50px;
+            color: white;
+            border: none;
+            background-color: rgb(53, 50, 50);
+            position: absolute;
+            cursor: pointer;
+            left: 30px;
+            top: 250px;
+        }
+        .right_btn{
+            width: 50px;
+            height: 50px;
+            color: white;
+            border: none;
+            background-color: rgb(53, 50, 50);
+            position: absolute;
+            right: 0px;
+            top: 250px;
+        }
+        img{
+            margin-top: 40px;
+            margin-bottom: 25px;
+            width: 350px;
+            height: 450px;
+        }
+    </style>
+
+    <script>
+        let imgInfos=[
+            ["https://www.musinsa.com/brands/addoff?category3DepthCodes=&category2DepthCodes=&category1DepthCode=&colorCodes=&startPrice=&endPrice=&exclusiveYn=&includeSoldOut=&saleGoods=&timeSale=&includeKeywords=&sortCode=NEW&tags=&page=1&size=90&listViewType=small&campaignCode=&groupSale=&outletGoods=false&boutiqueGoods=",
+                "https://www.musinsa.com/brands/rolarola?category3DepthCodes=&category2DepthCodes=&category1DepthCode=&colorCodes=&startPrice=&endPrice=&exclusiveYn=&includeSoldOut=&saleGoods=&timeSale=&includeKeywords=&sortCode=NEW&tags=&page=1&size=90&listViewType=small&campaignCode=&groupSale=&outletGoods=false&boutiqueGoods=",
+                "https://www.musinsa.com/brands/noirnine?category3DepthCodes=&category2DepthCodes=&category1DepthCode=&colorCodes=&startPrice=&endPrice=&exclusiveYn=&includeSoldOut=&saleGoods=&timeSale=&includeKeywords=&sortCode=NEW&tags=&page=1&size=90&listViewType=small&campaignCode=&groupSale=&outletGoods=false&boutiqueGoods="
+            ],
+            ["./images/1.jpg","./images/2.jpg","./images/3.jpg" ],
+            ["에드오프" ,"로라로라" ,"누아르나인"],
+            ["22F/W 컬렉션 발매|최대15%할인","22F/W 여자 아이들 민니 컬렉션 발매","22F/W 컬렉션 발매|5%쿠폰 할인호" ],
+            ["NEW ARRIVAL1","NEW ARRIVAL2","NEW ARRIVAL3"]
+    ];
+
+        let nt=0;
+        let ba=1;
+        let ab=2;
+        function nextImg_1(){
+            let AD_1 = document.querySelector("#AD_1 a");
+            AD_1.href = imgInfos[0][nt];  
+            let AD_1_1 = document.querySelector("#AD_1 img");
+            AD_1_1.src = imgInfos[1][nt]; 
+            let AD_1_2 = document.querySelector("#AD_1 p");
+            AD_1_2.innerHTML = imgInfos[2][nt]; 
+            let AD_1_3 = document.querySelector("#AD_1 h3");
+            AD_1_3.innerHTML = imgInfos[3][nt]; 
+            let AD_1_4 = document.querySelector("#AD_1 span");
+            AD_1_4.innerHTML = imgInfos[4][nt]; 
+            nextImg_2();
+            nextImg_3();
+            nt++
+            nt = nt %3;           
+        }
+        function nextImg_2(){
+            let AD_2 = document.querySelector("#AD_2 a");
+            AD_2.href = imgInfos[0][ba];
+            let AD_2_1 = document.querySelector("#AD_2 img");
+            AD_2_1.src = imgInfos[1][ba];
+            let AD_2_2 = document.querySelector("#AD_2 p");
+            AD_2_2.innerHTML = imgInfos[2][ba];
+            let AD_2_3 = document.querySelector("#AD_2 h3");
+            AD_2_3.innerHTML = imgInfos[3][ba];
+            let AD_2_4 = document.querySelector("#AD_2 span");
+            AD_2_4.innerHTML = imgInfos[4][ba];
+            ba++
+            ba = ba %3;
+        }
+        function nextImg_3(){
+            let AD_3 = document.querySelector("#AD_3 a");
+            AD_3.href = imgInfos[0][ab];
+            let AD_3_1 = document.querySelector("#AD_3 img");
+            AD_3_1.src = imgInfos[1][ab];
+            let AD_3_2 = document.querySelector("#AD_3 p");
+            AD_3_2.innerHTML = imgInfos[2][ab];
+            let AD_3_3 = document.querySelector("#AD_3 h3");
+            AD_3_3.innerHTML = imgInfos[3][ab];
+            let AD_3_4 = document.querySelector("#AD_3 span");
+            AD_3_4.innerHTML = imgInfos[4][ab];
+            ab++
+            ab = ab %3;
+        }
+
+        function prevImg_1(){
+            let AD_1 = document.querySelector("#AD_1 a");
+            AD_1.href = imgInfos[0][nt];  
+            let AD_1_1 = document.querySelector("#AD_1 img");
+            AD_1_1.src = imgInfos[1][nt]; 
+            let AD_1_2 = document.querySelector("#AD_1 p");
+            AD_1_2.innerHTML = imgInfos[2][nt]; 
+            let AD_1_3 = document.querySelector("#AD_1 h3");
+            AD_1_3.innerHTML = imgInfos[3][nt]; 
+            let AD_1_4 = document.querySelector("#AD_1 span");
+            AD_1_4.innerHTML = imgInfos[4][nt]; 
+            prevImg_2();
+            prevImg_3();
+            nt --
+            if(nt<0){nt=nt+3}
+            nt = nt %3;
+        }
+        function prevImg_2(){
+            let AD_2 = document.querySelector("#AD_2 a");
+            AD_2.href = imgInfos[0][ba];
+            let AD_2_1 = document.querySelector("#AD_2 img");
+            AD_2_1.src = imgInfos[1][ba];
+            let AD_2_2 = document.querySelector("#AD_2 p");
+            AD_2_2.innerHTML = imgInfos[2][ba];
+            let AD_2_3 = document.querySelector("#AD_2 h3");
+            AD_2_3.innerHTML = imgInfos[3][ba];
+            let AD_2_4 = document.querySelector("#AD_2 span");
+            AD_2_4.innerHTML = imgInfos[4][ba];
+            ba--
+            if(ba<0){ba=ba+3}
+            ba = ba %3;
+        }
+        function prevImg_3(){
+            let AD_3 = document.querySelector("#AD_3 a");
+            AD_3.href = imgInfos[0][ab];
+            let AD_3_1 = document.querySelector("#AD_3 img");
+            AD_3_1.src = imgInfos[1][ab];
+            let AD_3_2 = document.querySelector("#AD_3 p");
+            AD_3_2.innerHTML = imgInfos[2][ab];
+            let AD_3_3 = document.querySelector("#AD_3 h3");
+            AD_3_3.innerHTML = imgInfos[3][ab];
+            let AD_3_4 = document.querySelector("#AD_3 span");
+            AD_3_4.innerHTML = imgInfos[4][ab];
+            ab--
+            if(ab<0){ab=ab+3}
+            ab = ab %3;
+        }
+    </script>
+</head>
+<body>
+    <div class="gallery">
+        <ul id="AD_1" >
+            <li>
+                <a href="https://www.musinsa.com/brands/addoff?category3DepthCodes=&category2DepthCodes=&category1DepthCode=&colorCodes=&startPrice=&endPrice=&exclusiveYn=&includeSoldOut=&saleGoods=&timeSale=&includeKeywords=&sortCode=NEW&tags=&page=1&size=90&listViewType=small&campaignCode=&groupSale=&outletGoods=false&boutiqueGoods=">
+                <img  src="./images/1.jpg">
+                </a>
+            </li>
+            <li><P >에드오프</P></li>
+            <li><h3 >22F/W 컬렉션 발매|최대15%할인</h3></li>
+            <li><SPAN >NEW ARRIVAL1</SPAN></li>
+        </ul>
+        <ul id="AD_2">
+            <li>
+                <a  href="https://www.musinsa.com/brands/rolarola?category3DepthCodes=&category2DepthCodes=&category1DepthCode=&colorCodes=&startPrice=&endPrice=&exclusiveYn=&includeSoldOut=&saleGoods=&timeSale=&includeKeywords=&sortCode=NEW&tags=&page=1&size=90&listViewType=small&campaignCode=&groupSale=&outletGoods=false&boutiqueGoods=">
+                <img  src="./images/2.jpg">
+                </a>
+            </li>
+            <li><P >로라로라</P></li>
+            <li><h3 >22F/W 여자 아이들 민니 컬렉션 발매</h3></li>
+            <li><SPAN  >NEW ARRIVAL2</SPAN></li>
+        </ul>
+        <ul id="AD_3">
+            <li>
+                <a  href="https://www.musinsa.com/brands/noirnine?category3DepthCodes=&category2DepthCodes=&category1DepthCode=&colorCodes=&startPrice=&endPrice=&exclusiveYn=&includeSoldOut=&saleGoods=&timeSale=&includeKeywords=&sortCode=NEW&tags=&page=1&size=90&listViewType=small&campaignCode=&groupSale=&outletGoods=false&boutiqueGoods=">
+                <img  src="./images/3.jpg">
+                </a>
+            </li>
+            <li><P >누아르나인</P></li>
+            <li><h3 >22F/W 컬렉션 발매|5%쿠폰 할인</h3></li>
+            <li><SPAN >NEW ARRIVAL3</SPAN></li>
+        </ul>
+      
+        <!--버튼영역-->
+        <button class="left_btn" onclick="prevImg_1()"><</button>
+        <button class="right_btn" onclick="nextImg_1()">></button>
+    </div>
+</body>
+</html>

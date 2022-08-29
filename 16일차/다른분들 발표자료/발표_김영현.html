@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function get(){
+            let ul = document.getElementById("getId");      //getElementById 사용
+
+            let li = document.createElement("li");
+            li.innerHTML="발표";
+            ul.appendChild(li);
+
+            
+            li.addEventListener("click", function(){
+                li.innerHTML="입니다";
+            })
+        }
+
+        function query(){
+            let ul = document.querySelector("#getId");      //querySleetor 사용
+
+            let li = ul.lastElementChild;
+            ul.removeChild(li);
+
+        }
+      
+         
+    </script>
+</head>
+<body>
+
+    <ul id="getId"></ul>
+
+    <button onclick="get()">get버튼</button>
+    <button onclick="query()">query버튼</button>
+
+</body>
+</html>

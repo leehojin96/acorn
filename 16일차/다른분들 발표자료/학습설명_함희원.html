@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //배열(Array) : 순서가 있는 값들의 집합을 만들고 싶을 때 사용
+        
+        /*배열 선언
+        2가지 방법으로 배열 선언이 가능하다
+        */
+
+        1.
+        let arr1 = new Array('a','b','c');
+        2.
+        let arr2 = ['a','b','c'];
+
+       //배열 안의 요소들은 모든 자료형의 값들을 저장할 수 있고,
+       //요소들은 왼쪽부터 차례대로 순서를 가집니다.
+       //그리고 이 순서값을 index 라고 한다.
+       //주의할 점은 배열은 0번부터 순서를 가진다.
+       //예시
+       console.log(arr1);
+       /*위의 콘솔로그 arr배열의 1번 요소는 a가 아닌 b
+        a 값을 부르기 위해선
+       console.log(arr[0]);
+       으로 접근해야한다. */
+
+       //배열 요소의 추가 및 수정
+       let arr3=[];
+
+       //요소가 없는 배열에 추가하는방법
+       arr3[0]='에이콘';
+       arr3[1]='학원';
+       arr3[2]='홍대학원';
+
+       //요소 수정도 위와 같이 순서값에 접근하여 수정을 해주면 된다.
+       arr3[1]='아카데미';
+
+       //배열 속성
+       //배열의 길이를 출력할땐 length를 활용
+       console.log(arr3.length);    // 3
+
+       let arr4=[];
+
+       arr4[0]='안';
+       arr4[1]='녕';
+       arr4[2]='하';
+       arr4[4]='요';
+       /*위 처럼 중간에 4번째 요소를 빼고 값을 주어도
+       이 배열의 길이는 5가 된다.
+       중간에 빠진 순서값(index)는 빈 값(empty)가 할당되고
+       이 요소에 접근하면 undefined가 출력된다.
+       */
+      console.log(arr4[3]);
+
+    </script>
+</body>
+</html>
