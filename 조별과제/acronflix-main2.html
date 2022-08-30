@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+        .main_fixed {
+
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+            padding: 0px 10px 0px 55px;
+            height: 60px;
+            position: fixed;
+            top: 0%;
+            width: 100%;
+        }
+
+        .main_header {
+            position: relative;
+            display: flex;
+            line-height: 60px;
+
+        }
+
+        .logo_image {
+            margin: 10px 25px 0px 0px;
+        }
+
+        .logo_image img {
+            width: 100px;
+            height: 35px;
+        }
+
+        .nav {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        .nav_tab {
+            margin-left: 25px;
+        }
+
+        .nav_sec {
+            display: flex;
+            position: absolute;
+            right: 4%;
+        }
+
+        .search img {
+            width: 25px;
+            height: 25px;
+        }
+
+        .alram img {
+            width: 25px;
+            height: 25px;
+        }
+
+        main img {
+            margin-top: -60px;
+            width: 100%;
+        }
+
+        main .mainCenter {
+            position: relative;
+            width: 100%;
+            height: 1000px;
+            margin-top: -1000px;
+        }
+
+        .mainCenter_title {
+            width: 26%;
+            height: 21%;
+
+            position: absolute;
+            bottom: 32%;
+            left: 5%;
+        }
+
+        .mainCenter_info {
+            color: white;
+            font-size: larger;
+            width: 28%;
+            height: 20%;
+
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+        }
+
+        .mainCenter_playBtn {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+
+            width: 8%;
+            height: 7%;
+
+            border-radius: 3%;
+            border: none;
+            background-color: white;
+            font-size: 25px;
+            line-height: 10%;
+            font-weight: bold;
+        }
+
+        .mainCenter_playBtn:hover {
+            background-color: white;
+            opacity: 0.7;
+
+        }
+
+        .mainCenter_infoBtn {
+            position: absolute;
+            bottom: 10%;
+            left: 14%;
+
+            width: 10%;
+            height: 7%;
+
+            border-radius: 3%;
+            border: none;
+            background-color: gray;
+            color: white;
+            font-size: 25px;
+            line-height: 10%;
+            font-weight: bold;
+        }
+
+        .mainCenter_infoBtn:hover {
+            background-color: gray;
+            opacity: 0.7;
+        }
+
+        .mainCenter_deadline {
+            position: absolute;
+            width: 100%;
+            height: 110px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+            bottom: -1%;
+        }
+
+        .mainSlide {
+            background-color: black;
+            width: 100%;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: white;
+            font-weight: bold;
+        }
+
+        .swiper-wrapper div {}
+    </style>
+    <script>
+        document.addEventListener('scroll', function () {
+            var currentScrollValue = document.documentElement.scrollTop;
+
+            let main_fixed = document.getElementById('main_fixed');
+            if (0 < currentScrollValue) {
+                main_fixed.style.backgroundColor = "black";
+            } else {
+                main_fixed.style.background = "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))";
+
+            }
+        });
+
+        window.addEventListener("load", function () {
+            //alert("a");
+            new Swiper('.swiper', {
+                slidesPerView: 5,   //슬라이드 개수
+                spaceBetween: 10,  // 슬라이드 사이의 여백
+                centeredSlides: true,   // 가운데시작여부
+                loop: true,            //반복
+                autoplay: {            //2초 간격으로 자동재생
+                    delay: 5000
+                },
+                pagination: {                  //하단 페이지부분
+                    el: '.swiper-pagination',
+                    clickable: true           //클릭여부
+                },
+                // Navigation arrows
+                navigation: {               // 이전 버튼, 다음버튼 
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+
+
+
+
+        })
+
+        function mainCenter_play(url,w,h,sb) {
+           
+            window.open(url,w,h);
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+
+        <div class="main_fixed" id="main_fixed">
+            <div class="main_header">
+                <a class="main_logo" href="./acronflix-main2.html">
+                    <div class="logo_image">
+                        <img src="./images/netflix_logo.png">
+                    </div>
+                </a>
+                <ul class="nav">
+                    <a href="#">
+                        <li class="nav_tab">홈</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav_tab">시리즈</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav_tab">영화</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav_tab">NEW! 요즘 대세 콘텐츠</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav_tab">내가 찜한 콘텐츠</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav_tab">언어별로 찾아보기</li>
+                    </a>
+                </ul>
+                <div class="nav_sec">
+                    <div class="search">
+                        <img src="./images/serach_logo.png">
+                    </div>
+
+                    <div class="user"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <img src="./images/main_poster2.jpg">
+        <div class="mainCenter">
+            <img class="mainCenter_title" src="./images/main_title.png">
+            <span class="mainCenter_info">
+                빛에 쫓기는 수백 명의 사람들이 서바이벌 게임에 뛰어든다. 거액의 상금으로 새로운 삶을 시작하기 위해.
+                하지만 모두 승자가 될 순 없는 법. 탈락하는 이들은 치명적인 결과를 각오해야 한다.
+            </span>
+            <button class="mainCenter_playBtn" onclick="mainCenter_play('https://www.youtube.com/embed/b96oSVw75lA' , '560','315','no')"> ▶ 재생</button>
+            <button class="mainCenter_infoBtn">ⓘ 상제정보</button>
+            <div class="mainCenter_deadline">
+            </div>
+
+        </div>
+        <div class="mainSlide">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"> <img src="images/서울대작전.PNG"></div>
+                    <div class="swiper-slide"> <img src="images/이상한변호사우영우.PNG"></div>
+                    <div class="swiper-slide"> <img src="images/인간실력.png"></div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
