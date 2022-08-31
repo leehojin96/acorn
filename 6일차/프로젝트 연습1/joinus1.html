@@ -44,17 +44,19 @@
             padding: 10px;
             text-align: center;
         }
-        table button{
+
+        table button {
             width: 130px;
             height: 35px;
             border: 0.5px solid grey;
             border-radius: 5px;
         }
-        table button:hover{
+
+        table button:hover {
             background-color: rgb(150, 150, 150);
         }
 
-        table select{
+        table select {
             width: 100px;
             height: 30px;
 
@@ -70,88 +72,104 @@
             color: red;
         }
     </style>
+    <script>
+
+        function setDomain(){
+
+            let frm = document.frm;
+
+            let domain = frm.domain;
+            let email = frm.email;
+
+            let domainText = domain.options[domain.selectedIndex].text;
+
+            email.value = domainText;
+        }
+    </script>
 </head>
 
 <body>
     <div class="joinus_wrap">
         <h2>회원가입</h2>
-        <div class="join_table">
-            <table>
-                <tr>
-                    <td>이름</td>
-                    <td><input type="text"></td>
-                </tr>
+        <form name="frm" method="post" action="">
+            <div class="join_table">
+                <table>
+                    <tr>
+                        <td>이름</td>
+                        <td><input type="text"></td>
+                    </tr>
 
-                <tr>
-                    <td class="td_flex">아이디</td>
-                    <td>
-                        <input type="text">
-                        <button>
-                            중복확인
-                        </button>
-                    </td>
-                </tr>
+                    <tr>
+                        <td class="td_flex">아이디</td>
+                        <td>
+                            <input type="text">
+                            <button>
+                                중복확인
+                            </button>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td>비밀번호</td>
-                    <td><input type="password">
-                        <div id="warning">※비밀번호는 8자리이상 영문숫자로 작성해 주세요.</div>
-                    </td>
+                    <tr>
+                        <td>비밀번호</td>
+                        <td><input type="password">
+                            <div id="warning">※비밀번호는 8자리이상 영문숫자로 작성해 주세요.</div>
+                        </td>
 
-                </tr>
+                    </tr>
 
-                <tr>
-                    <td>비밀번호확인</td>
-                    <td><input type="password">
+                    <tr>
+                        <td>비밀번호확인</td>
+                        <td><input type="password">
 
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td class="td_flex">이메일</td>
-                    <td>
-                        <input type="text">
-                        @
-                        <input type="text">
-                        <select>
-                            <option>선택하세요</option>
-                            <option>naver.com</option>
-                            <option>google.com</option>
-                        </select>
-                        <button>중복확인</button>
-                    </td>
-                </tr>
+                    <tr>
+                        <td class="td_flex">이메일</td>
+                        <td>
+                            <input type="text">
+                            @
+                            <input type="text" name="email">
+                            <select name="domain" onchange="setDomain()">
+                                <option>선택하세요</option>
+                                <option>naver.com</option>
+                                <option>google.com</option>
+                            </select>
+                            <button>중복확인</button>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td class="td_flex">학년/반</td>
-                    <td><select>
-                            <option>선택하세요</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select>
-                        학년
+                    <tr>
+                        <td class="td_flex">학년/반</td>
+                        <td><select>
+                                <option>선택하세요</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            학년
 
-                        <select>
-                            <option>선택하세요</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select>
+                            <select>
+                                <option>선택하세요</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
 
 
-                        반
-                    </td>
-                </tr>
+                            반
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td colspan="2" class="">
-                        <button>가입</button>
-                        <a href="index1.html"><button>취소</button></a>
-                    </td>
-                </tr>
-            </table>
-        </div>
+                    <tr>
+                        <td colspan="2" class="">
+                            <button>가입</button>
+                            <a href="index1.html"><button type="button">취소</button></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
     </div>
 </body>
 

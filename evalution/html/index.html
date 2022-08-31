@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="head_footer.css" rel="stylesheet">
+    <style>
+       
+
+       
+
+        ul {
+            list-style: none;
+            display: flex;
+            width: 1000px;
+            margin: 0 auto;
+             
+            
+        }
+
+        li {
+            width: 300px;   
+            padding: 20px;
+            border: 0.5px solid rgb(255, 241, 241);
+            text-align: center; 
+            margin-left: 5px;
+            position: relative;
+        }
+
+        li img {
+            width: 200px;
+            height: 220px;
+        }
+
+        .box{
+            background-color: black;
+            color: red;
+            width: 130px;
+            padding: 10px;
+            position: absolute;
+            top: -10px;
+            height: 30px;            
+        }
+      
+    </style>
+    <script>
+
+    </script>
+
+    <!-- 다음의 지시사항대로 화면을 구현하시오
+■화면구현 파일명은 다음과 같이 한다.
+첫페이지(메인페이지) : index.html
+회원가입 : joinus.html
+로그인 : login.html
+- 바탕화면 evalution 폴더안에 html폴더를 만들고 3개의 웹문서를 작성합니다.
+- 이미지 폴더 (images)를 evaluation 폴더로 아래로 위치 해 둡니다. ( images 폴더는 제공됩니다)
+- 문제에서 주어진 스타일을 적용하시오. 나머지는 주어진 화면과 비슷하게 나올 수 있도록 설정 합니다
+
+1. 메인화면을 아래의 지시사항에 따라 구현하시오
+파일명: index.html
+
+1) header
+//높이 :100px 설정 , background-color: rgb(245, 248, 248) 설정
+//- title 영역: div태그 (img 태그를 이용, logo.png )
+//title 영역 위치: header내 left: 10px , top: 20px (position:absolute)
+
+//- search영역 (검색바 영역) div태그
+//search영역 위치: header내 right:10px , bottom:20px (position:absolute)
+//검색바가 위에서 제시된 형태로 표시되도록 스타일 설정하시오
+
+2) nav 영역 : 높이:40px 설정 , padding:20px로 설정 , background-color: rgb(232, 243, 243);
+
+3) section 영역
+- section 영역의 높이 height : 600px로 설정함
+과정소개 박스는 ul li을 사용하시오
+li태그 스타일: 너비 300px , padding:20px ,
+가운데정렬, border : 0.5px solid rgb (255 , 241 , 241 );
+li 안의 이미지(img태그 사용)크기 : 너비:200px, 높이:220px 설정
+
+- 과정소개박스 왼쪽 윗부분에 과정이름을 그림과 같이 배치하시오 (bigdata, Adroid , Front)
+(크기:130px, padding:10px, 글자색:red ,배경색: black) 
+
+4) footer영역
+- 높이(height): 60px    
+- background-color : rgb (233 , 239 , 239 )설정
+- footer영역 안에 3개의 영역 분할 
+- item 영역의 너비: 33% 설정
+- item 영역의 높이: 60px;
+- 각 영역에 제시된 화면과 같이 나타나도록 구성합니다 .
+- footer의 이미지 파일:  images폴더  footer_acorn.png
+
+5) nav 영역에  로그인과 회원가입 홈으로는 링크가 될 수 있도록 설정합니다.  그림과 같이 나오도록 설정합니다.
+로그인 ->  login.html 페이지로 링크   
+회원가입 ->joinus.html 페이지로 링크       
+홈으로  -> index.html 페이지로 링크
+-->
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="headerLogo">
+            <a href="index.html">
+                <img src="/images/logo.png">
+            </a>
+        </div>
+        <div class="headerSearch">
+            <input type="text"><img src="/images/검색.png">
+        </div>
+    </header>
+    <nav>
+        <a href="/html/login.html">로그인</a>
+        <a href="/html/joinus.html">회원가입</a>
+        <a href="/html/index.html">홈으로</a>
+    </nav>
+    <section>
+            <ul>
+                <li>
+                    <div class="box box1">bigdata</div>
+                    <img src="/images/img01.png">
+                    <p>
+                        프로젝트기반 빅데이터분석 과정
+                    </p>
+                </li>
+                <li>
+                    <div class="box box2">Adroid</div>
+                    <img src="/images/img02.png">
+                    <p>
+                        자바(JAVA) & 안드로이드 개발자 양성과정
+                    </p>
+                </li>
+                <li>
+                    <div class="box box3">Front</div>
+                    <img src="/images/img03.png">
+                    <p>
+                        Web기반 프론트엔드 자바개발자 양성과정
+                    </p>
+                </li>
+            </ul>
+ 
+    </section>
+    <footer>
+        <div class="footerImg">
+            <a href="index.html">
+                <img src="/images/footer_acorn.png">
+            </a>
+        </div>
+        <div class="footer1">
+            (주)에이콘이즈 에이콘아카데미(홍대)
+        </div>
+        <div class="footer2">
+            COPYRIGHT(C) HBILAB. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+</body>
+
+</html>

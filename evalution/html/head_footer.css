@@ -1,0 +1,73 @@
+section {
+    height: 600px;
+    padding: 20px;
+    font-size: 14px;
+}
+header {
+    height: 100px;
+    background-color: rgb(245, 248, 248);
+    position: relative;
+}
+
+.headerLogo {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+.headerSearch {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.headerSearch img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 2px;
+    bottom: 1px;
+}
+
+.headerSearch input {
+    height: 35px;
+    border: none;
+
+}
+
+nav {
+    height: 40px;
+    padding: 20px;
+    background-color: rgb(232, 243, 243);
+
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+
+}
+
+footer{
+    height: 60px;
+    display: flex;
+    background-color : rgb(233 , 239 , 239 );
+    line-height: 60px;
+}
+.footerImg{
+    margin-top: 5px;
+    margin-left: 15px;
+    width: 33%;
+    height: 60px;
+}
+.footer1{
+    width: 33%;
+    height: 60px;
+}
+.footer2{
+    width: 33%;
+    height: 60px;
+}

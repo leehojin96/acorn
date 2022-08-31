@@ -9,21 +9,25 @@
 
         function calculation(){
          
-            let su1 = document.querySelector("#su1");
-            let su2 = document.querySelector("#su2");
-            let result = document.querySelector("#result");
-            result = su1 + su2;
-            document.write(result);
+            let su1El = document.querySelector("#su1");
+            let su2El = document.querySelector("#su2");
 
-            // document.getElementById("result")= "1";
+            let su1 = parseInt(su1El.value);
+            let su2 = parseInt(su2El.value);
+
+            let resultEl = document.querySelector("#result");
+            
+            resultEl.value = su1+ su2;
+
         }
 
     </script>
 </head>
 <body>
 
-    <input type="text" id="su1"> + <input type="text" id="su2"> = <input type="text" id="result">
-    <button onclick="calculation()">계산</button>
+        <input type="text" id="su1"> + <input type="text" id="su2"> = <input type="text" id="result">
+        <button onclick="calculation()">계산</button>
+ 
     
 </body>
 </html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="head_footer.css" rel="stylesheet">
+    <style>
+        
+        .log_wrap{
+
+            width: 400px;
+            padding: 20px;
+            border: 0.5px solid rgb( 234, 222, 222);
+            margin: 0 auto;
+        }
+        .log_img{
+            width: 300px;
+            height: 300px;
+            background-image: url("/images/login_logo.jpg");
+            background-position: center;
+            background-size: cover;
+            margin: 0 auto;
+
+        }
+        .log_info{
+            padding: 10px;
+
+        }
+        .log_info input{
+            width: 98%;
+            height: 40px;
+            margin-top: 5px;
+        }
+        .log_info button{
+            width: 100%;
+            height: 50px;
+            background-color: silver;
+            border: 0px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function check(){
+
+            let frm = document.frm;
+            let userId = frm.userId;
+            let userPw = frm.userPw;
+
+            if(userId.value == ""){
+                alert("아이디를 입력 하세요.");
+                userId.focus();
+            }else if(userPw.value == ""){
+                alert("비밀번호를 입력 하세요.");
+                userPw.focus();
+            }else{
+                alert("로그인 성공");
+            }
+        }
+
+
+    </script>
+    <!-- 3. 다음의 로그인 화면을 구현하시오
+    - 로그인영역 크기
+    width:400px 설정 (“log_wrap”)
+    padding :20px 설정
+    border: 0.5px solid rgb( 234, 222, 222) 설정
+    - 이미지영역(“log_img”)
+    이미지영역의 가로 세로 크기 : 300px 300px
+    이미지영역의 배경이미지:
+    background-img: url(../images/login_logo.jpg)
+    background-size:cover , background-position:center
+    - 로그인정보영역(“log_info”)
+    padding 10px 설정
+    : 로그인 정보영역의
+    input : width:98%, height:40px , margin_top:5px 설정
+    button: width:100% , height:50px, background-color:silver;
+    border:0px, margin-top:10px; 으로 설정
+    - 로그인 버튼 클릭시 아이디와 비밀번호 미입력에 대한 경고 메시지 표시함
+    (적절한 메시지 표시)
+    - 미입력 경고 메시지 표시 후 포커스 이동
+    - 로그인 버튼 클릭시 모든 정보(아이디, 비밀번호)입력된 경우
+    로그인 성공 메시지 표시
+    - 나머지 사항은 다음 그림과 비슷하게 구현될 수 있도록 설정 함 -->
+</head>
+
+<body>
+
+    <header>
+        <div class="headerLogo">
+            <a href="index.html">
+                <img src="/images/logo.png">
+            </a>
+        </div>
+        <div class="headerSearch">
+            <input type="text"><img src="/images/검색.png">
+        </div>
+    </header>
+    <nav>
+        <a href="/html/login.html">로그인</a>
+        <a href="/html/joinus.html">회원가입</a>
+        <a href="/html/index.html">홈으로</a>
+    </nav>
+    <section>
+        <form name="frm" method="post" action="">
+
+
+            <div class="log_wrap">
+                <div class="log_img">
+                </div>
+                <div class="log_info">
+                    <input type="text" placeholder="아이디" name="userId">
+                    <input type="password" placeholder="비밀번호" name="userPw">
+                    <button type="button" onclick="check()">로그인</button>
+                </div>
+            </div>
+        </form>
+
+ 
+    </section>
+    <footer>
+        <div class="footerImg">
+            <a href="index.html">
+                <img src="/images/footer_acorn.png">
+            </a>
+        </div>
+        <div class="footer1">
+            (주)에이콘이즈 에이콘아카데미(홍대)
+        </div>
+        <div class="footer2">
+            COPYRIGHT(C) HBILAB. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+</body>
+</html>

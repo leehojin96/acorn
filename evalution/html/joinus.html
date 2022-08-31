@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="head_footer.css" rel="stylesheet">
+    <style>
+        
+        h3{
+            text-align: center;
+        }
+        table {
+            width: 800px;
+            border: 1px solid rgb(227, 216, 216);
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+
+        table td {
+            border: 1px solid rgb(227, 216, 216);
+        }
+
+        table tr {
+            height: 40px;
+        }
+
+        table td:nth-child(1) {
+            text-align: center;
+        }
+
+        table div {
+            display: inline;
+        }
+
+        table tr:nth-child(3) {
+            height: 70px;
+        }
+
+        table tr:nth-child(7) {
+            height: 70px;
+
+        }
+
+        table input,
+        table select {
+            width: 150px;
+            height: 30px;
+        }
+
+        table button {
+            width: 150px;
+            height: 40px;
+            border: 0px;
+        }
+
+        table span {
+            color: red;
+            font-size: 12px;
+            display: flex;
+        }
+    </style>
+
+    <script>
+
+        function setDomain() {
+
+            let frm = document.frm;
+
+            let domain = frm.domain;
+            let userDomain = frm.userDomain;
+
+            // let index = userDomain.selectedIndex;
+            // let domainText = userDomain.options[index].text;
+
+            userDomain.value = domain.value;
+        }
+
+        function join() {
+
+            let frm = document.frm;
+
+            let userName = frm.userName;
+            let userId = frm.userId;
+            let userPw = frm.userPw;
+            let userPwcheck = frm.userPwcheck;
+            let userEmail = frm.userEmail;
+            let userDomain = frm.userDomain;
+
+            let a = frm.a;
+            let b = frm.b;
+
+
+
+
+            if (userName.value == "") {
+                alert("이름을 입력하세요.");
+                userName.focus();
+            }
+            else if (userId.value == "") {
+                alert("아이디를 입력하세요.");
+                userId.focus();
+            }
+            else if (userPw.value == "") {
+                alert("비밀번호를 입력하세요.");
+                userPw.focus();
+            }
+            else if (userPwcheck.value == "") {
+                alert("비밀번호확인을 입력하세요.");
+                userPwcheck.focus();
+            }
+            else if (userEmail.value == "") {
+                alert("이메일을 입력하세요.");
+                userEmail.focus();
+            }
+            else if (userDomain.value == "") {
+                alert("이메일을 입력하세요.");
+                userDomain.focus();
+            }
+            else if (a.value == 00) {
+
+                alert("학년을 선택하세요.");
+                a.focus();
+            }
+            else if (b.value == 00) {
+
+                alert("반을 선택하세요.");
+                b.focus();
+            }
+            else if (!(userPw.value == userPwcheck.value)) {
+                alert("비밀번호가 같지 않습니다.");
+            }
+
+
+            else {
+                alert("회원가입을 축하합니다");
+            }
+
+
+
+        }
+        
+        function back(){
+            alert("홈으로 돌아갑니다.");
+            //window.open();
+        }
+        function emailCheck(){
+            alert("중복 확인되었습니다.");
+        }
+    </script>
+    <!-- 2. 다음의 회원가입 화면을 구현하시오 (table 사용하시오)
+    지시사항 (제시된 화면의 구성과 비슷하게 구현하시오)
+    - 테이블의 너비(width): 800px 설정 , border: 1px solid rgb(227, 216, 216),
+    - 회원가입테이블 가운데 설정
+    - td의 테두리설정: border: 1px solid rgb(227, 216, 216);
+    - 테이블 안의 글자크기: font-size:12px
+    - 테이블의 줄간격 tr의 높이(height): 40px
+    - 테이블의 3번째와 7번째 줄의 높이(height) 70px 설정
+    - 테이블의 input , select : width:150px , height:30px
+    button : width: 150px height:40px, border:0px 으로 설정
+    - 회원가입 버튼 클릭시 유효성 체크 하시오
+    1) 이름 미입력시 “이름 입력하세요”, 이름으로 포커스 이동
+    2) 아이디 미입력시 “아이디 입력하세요”, 아이디로 포커스 이동
+    3) 비밀번호 미입력시
+    “비밀번호 입력하세요” 비밀번호로 포커스 이동
+    비밀번호확인 미입력시
+    “비밀번호확인을 설정 하세요” 비밀번호확인으로 포커스 이동
+    4) 이메일 미입력시 이메일입력또는 선택을 할 수 있도록 적절한 메시지창 표시
+    5) 모든 입력이 정상적으로 이루어지면 “회원가입성공” 메시지 출력
+    6) 비밀번호 유의사항은 빨간색으로 나오도록 설정하시오( span태그 사용)
+    7) 이메일 도메인 선택시 왼쪽 input 값에 설정되도록 하시오 -->
+</head>
+
+<body>
+
+    <header>
+        <div class="headerLogo">
+            <a href="index.html">
+                <img src="/images/logo.png">
+            </a>
+        </div>
+        <div class="headerSearch">
+            <input type="text"><img src="/images/검색.png">
+        </div>
+    </header>
+    <nav>
+        <a href="/html/login.html">로그인</a>
+        <a href="/html/joinus.html">회원가입</a>
+        <a href="/html/index.html">홈으로</a>
+    </nav>
+    <section>
+        <h3>
+            회원가입
+        </h3>
+        <form name="frm" method="post" action="">
+
+            <table>
+                <tr>
+                    <td>이름</td>
+                    <td><input type="text" name="userName"></td>
+                </tr>
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" name="userId"></td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td><input type="password" name="userPw"> <span>
+                            ※ 비밀번호는 8자리 이상 영문숫자를 작성해주세요.
+                        </span></td>
+
+                </tr>
+                <tr>
+                    <td>비밀번호확인</td>
+                    <td>
+                        <input type="password" name="userPwcheck">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td>
+                        <input type="text" name="userEmail">
+                        <div>@</div>
+                        <input type="text" name="userDomain">
+                        <select name="domain" onchange="setDomain()">
+                            <option>선택하세요</option>
+                            <option>naver.com</option>
+                            <option>google.com</option>
+                        </select>
+                        <button type="button" onclick="emailCheck()">중복 확인</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>학년/반</td>
+                    <td>
+                        <select name="a">
+                            <option value="00">선택하세요</option>
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">3</option>
+                        </select>
+                        <div>학년</div>
+                        <select name="b">
+                            <option value="00">선택하세요</option>
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">3</option>
+                        </select>
+                        <div>반</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button onclick="join()" type="button">가입</button>
+                        <button type="button" onclick="back()">취소</button>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </section>
+    <footer>
+        <div class="footerImg">
+            <a href="index.html">
+                <img src="/images/footer_acorn.png">
+            </a>
+        </div>
+        <div class="footer1">
+            (주)에이콘이즈 에이콘아카데미(홍대)
+        </div>
+        <div class="footer2">
+            COPYRIGHT(C) HBILAB. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+</body>
+
+</html>
