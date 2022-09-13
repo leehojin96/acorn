@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        font-family:Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .col1{
+        flex-basis: 50%;  /*반쪼가리만 사용할거임*/
+        flex-grow: 1;
+        background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+        url(./image.png);  /*백그라운드에다가 그라데이션*/
+        background-size: cover;
+        background-position: center;
+
+
+        min-height: inherit;
+        padding: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column; /* 나누기 */
+         color:#fff
+    }
+    
+    .col1 ul{
+        list-style: none;
+
+    }
+
+    .col1 ul li{
+        display: flex;
+        align-items: center;
+        margin: 12px 0;
+
+    }
+
+    .col1 ul li img{
+        width:20px;
+        margin-right: 15px;
+    }
+
+    .logo{
+        width:200px;
+        margin-bottom: 30px;
+    }
+
+    .col2{
+        flex-basis: 50%; 
+        flex-grow: 1;
+
+        min-height: inherit;
+        padding: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column
+        
+
+    }
+
+    .info_wrap{
+    margin: 0 auto;
+    max-width: 440px;
+    text-align: left;
+
+    }
+    .level{
+    margin-top: 20px;
+    display: inline-block;
+    }
+    .level span{
+    display: block;
+    line-height: 20px;
+    font-size: 13px;
+    padding-bottom: 0;
+    }
+    .level .levelTitle{
+    font-weight: 600;
+    margin: 0 0 12.8px;
+    }
+
+    .extext{
+     font-size: 19px;
+    }
+
+    .logos_block{
+     width: 440px;
+     height: 27px;
+    }
+
+    .logos_block img {
+        width: 40px;
+        height: 25px;
+        margin: 1px 6px 1px 0px;
+        } 
+        
+    .col2 ul{
+    list-style: none;
+
+    }
+
+    .col2 ul li{
+        display: flex;
+        align-items: center;
+        margin: 12px 0;
+
+    }   
+    
+    .col2 ul li input{
+        display: flex;
+        align-items: center;
+        margin: 12px 0;
+        width: 95%;
+        height: 48px;
+       
+    } 
+    .col2 ul li select{
+        display: flex;
+        align-items: center;
+        margin: 12px 0;
+        width: 98%;
+        height: 52px;
+    }
+
+    .btn{
+            margin-top: 20px;
+            margin-left: 15px;
+            font-size: 24px;
+            width: 92%;
+            line-height: 2;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: red;
+        }
+        .btn:hover{
+            background-color: rgb(255, 47, 47);
+        }
+
+        h2{
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            margin-top: -50px;
+        }
+
+        h2 img{
+            width: 26px;
+            margin-right: 10px;
+        }
+
+        form{
+            width: 300PX;
+            color:#333;
+            font-weight: 500;
+            font-size:18px    
+        }
+
+        label{
+            display: flex;
+            padding: 25px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 20px 5px rgba(214, 21, 21, 0.15);
+           
+            align-items: center;
+            font-size: 12px;
+            font-weight: 500;
+            color: #999;
+
+        }
+
+        
+</style>
+<body>
+    <div class="container"> 
+        <div class="col1">
+         
+            <img src="./logo.png" class="logo"><br>
+
+         <ul>
+            <li><img src="icon.png">
+                19세 이상이며 , 아래의 약관에 모두 동의합니다.  </li>
+            
+            <li><img src="icon.png">
+                Netflix  이용 약관 및 개인정보 처리방침에 동의합니다  </li>
+            <li><img src="icon.png">
+                본인의 개인 정보를 제3자에 제공하는 데에 동의합니다.  </li>
+            <li><img src="icon.png">
+                본인의 개인 정보가 해외로 이전되는 데에 동의합니다. </li>
+                <li><img src="icon.png">
+                본인의 개인정보를 결제서비스업체에 제공하는 데에 동의합니다. </li>    
+         </ul>   
+
+        
+        </div>  <!--col1-->
+        <div class="col2" style="border: 1px solid blue;">
+
+            <h2><img src="./icon.png" alt="">Your plans </h2>
+            <form>
+                <label for="free">
+                    <input type="radio" name="plans" id="free">
+                    <span>Standard / <small>17,000(kr)</small></span>
+                </label>
+
+                
+                
+            </form>
+
+            <ul>
+                    <div class="level">
+                        <span>
+                            <b>3</b>/<b>3 단계</b>
+                        </span>
+                        <h1 class="levelTitle" style="font-size: 35px;">신용카드나 체크카드 등록</h1>
+        
+                        <span class="logos_block">
+                            <img class="logoIcon"  src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/bc.svg">
+                            <img class="logoIcon"  src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/hana.svg">
+                            <img class="logoIcon"  src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/hyundai.svg">
+                            <img class="logoIcon"  src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/kb.svg">
+                            <img class="logoIcon"  src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/lotte.svg">
+                            <img class="logoIcon"  src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/nh.svg">
+                            <img class="logoIcon"  src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/samsung.svg">
+                            <img class="logoIcon"  src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/shinhan.svg">
+                            <img class="logoIcon"  src="https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/unionpay.svg"></span>
+                    </div> <!--level-->
+        
+                    <div class="userinput" style="border: 3px solid coral;">
+        
+                        <ul>
+                            <li>
+                                
+                                    <input type="text" class="inputEmail" name="cardNum" placeholder="이메일 주소를 입력하세요"/>
+                                
+                            </li>
+        
+                            <li>
+                                
+                                    <input type="text"   class="inputExp"name="exp" placeholder="만료일(월/년)"/>
+                                
+                            </li>
+        
+                            <li>
+                                
+                                    <input type="text"  class="inputName" name="userName" placeholder="이름"/>
+                                
+                            </li>
+        
+                            <li>
+                                
+                                    <input type="text"  class="inputYear" name="year" placeholder="생년"/>
+                                
+                            </li>
+        
+                            <li>
+                                
+                                    <select name="month" class="inputMonth" aria-placeholder="생월">
+                                        <option >1월</option>
+                                        <option >2월</option>
+                                        <option >3월</option>
+                                        <option >4월</option>
+                                        <option >5월</option>
+                                        <option >6월</option>
+                                        <option >7월</option>
+                                        <option >8월</option>
+                                        <option >9월</option>
+                                        <option >10월</option>
+                                        <option >11월</option>
+                                        <option >12월</option>
+        
+                                    </select>
+                                
+                            </li>
+        
+                            
+                            <li>
+                                
+                                    <select name="day" class="inputday" aria-placeholder="생일">
+                                        <option >1일</option>
+                                        <option >2일</option>
+                                        <option >3일</option>
+                                        <option >4일</option>
+                                        <option >5일</option>
+                                        <option >6일</option>
+                                        <option >7일</option>
+                                        <option >8일</option>
+                                        <option >9일</option>
+                                        <option >10일</option>
+                                    </select>           
+                            </li> 
+
+                            <li>
+                                <button type="submit" class="btn">동의하고 계속</button>
+                            </li>
+                        </ul>   
+            
+            
+            <div>
+
+    </div>
+</body>
+</html>

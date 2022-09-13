@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .header_body1_wrap{
+            background-image: url("images/1.png");
+        }
+        h1, h2, h3{
+            color : white;
+        }
+        .header{
+            height: 80px;
+            
+            position: relative;
+        }
+        .logo{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            color: red;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .language{
+            position: absolute;
+            right: 100px;
+            top: 20px;
+        }
+        .login_btn{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .body_wrap1{
+            height: 600px;
+            position: relative;
+                        
+        }
+        .body_main1{
+            
+            position: absolute;
+            text-align: center;
+            width: 800px;
+            top: 150px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            
+        }
+        .input_start_btn_wrap{
+            display: flex;
+            position: absolute;
+            left: 150px;
+        }
+        .input_email{
+            width: 400px;
+            height: 50px;
+        }
+        .start_btn{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            text-align: center;
+            color: white;
+            line-height: 50px;
+        }
+        .start_btn:hover{
+            background-color: yellow;
+            color: black;
+        }
+        .body_wrap2{
+            height: 500px;
+            background-color: red;
+            position: relative;
+                        
+        }
+        .body_text2{
+            width: 500px;
+            border: 1px solid black;
+            position: absolute;
+            top: 150px;
+            left: 50px;
+        }
+        .body_pic2{
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+            position: absolute;
+            top: 150px;
+            right: 100px;
+        }
+        .body_wrap3{
+            height: 500px;
+            background-color: blue;
+            position: relative;            
+        }
+        .body_text3{
+            width: 500px;
+            border: 1px solid black;
+            position: absolute;
+            top: 150px;
+            left: 50px;
+        }
+        .body_pic3{
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+            position: absolute;
+            top: 150px;
+            right: 100px;
+        }
+        hr{
+            background-color: rgb(100, 96, 96);
+            margin: 0;
+            height: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header_body1_wrap">
+    <!-- header -->
+    <div class="header">
+        <div class="logo">ACORNFLIX</div>
+        <select class="language">
+            <option>한국어</option>
+            <option>영어</option>
+        </select>
+
+        <button class="login_btn">로그인</button>
+    </div>
+
+    <!-- body -->
+    <div class="body_wrap1">
+        <div class="body_main1">
+            <h1>영화와 시리즈를 무제한으로.</h1>
+            <h2>다양한 디바이스에서 시청하세요. 언제든 해지하실 수 있습니다.</h2>
+            <h3>시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</h3>
+
+            <div class="input_start_btn_wrap">
+                <input type="text" placeholder="이메일 주소" class="input_email">
+                <div class="start_btn">시작하기 ></div>
+            </div>
+            
+        </div><br>
+
+    </div>
+    </div>
+    <hr>
+
+
+    <div class="body_wrap2">
+        <div class="body_main2">
+            <div class="body_text2">
+                <h1>TV로 즐기세요</h1>
+                <h2>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 
+                다양한 디바이스에서 시청하세요.
+                </h2>
+            </div>
+            <div class="body_pic2">
+                사진
+            </div>
+        </div>
+    </div>
+
+    <div class="body_wrap3">
+        <div class="body_main3">
+            <div class="body_text3">
+                <h1>TV로 즐기세요</h1>
+                <h2>스마트 TV, PlayStation, Xbox, Chromecast, Apple TV, 블루레이 플레이어 등 
+                다양한 디바이스에서 시청하세요.
+                </h2>
+            </div>
+            <div class="body_pic3">
+                사진
+            </div>
+            
+        </div>
+    </div>
+    <!-- footer -->
+
+</body>
+</html>

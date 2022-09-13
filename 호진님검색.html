@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #word{
+            display: none;
+        }
+    </style>
+    <script>
+      function search(){       
+       let word = document.getElementById("word");
+       if(word.style.display !="inline-block"){
+            word.style.display="inline-block";
+       }else{     
+
+          if( word.value=="") {
+            alert("검색어 입력하세요");
+            word.focus();
+            return;       //아래 내용이 수행되지 않게 함수리턴함( 함수종료의미)
+          }
+          alert( word.value +"검색중......");
+              //검색완료되면 사라지게 함
+          word.style.display="none";         
+        } 
+      } 
+    //  blur시 사라지면 검색에서 사용할 내용을 이용할 수 없다.
+    //  검색이 완료되면 사라지게 함
+    //  그래서 시간지연을 시킴으로 검색할 수 있는 시간 확보
+    //   2초 지나면 사라지게 함 
+       function hide(){       
+        let word = document.getElementById("word");
+        setTimeout( function(){
+          word.style.display="none";
+        }, 100);
+       
+      }        
+    </script>    
+    <input type="text"   id="word"  onblur="hide()"/>  <button  onclick="search()">클릭</button>
+</body>
+</html>
